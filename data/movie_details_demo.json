@@ -1,0 +1,400 @@
+[
+    {
+      "status": true,
+      "msg": "",
+      "movie": {
+        "tmdb": {
+          "type": "tv",
+          "id": "273123",
+          "season": 1,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        "imdb": {
+          "id": null
+        },
+        "created": {
+          "time": "2025-05-02T19:53:56.000Z"
+        },
+        "modified": {
+          "time": "2025-05-14T23:14:37.000Z"
+        },
+        "_id": "3e6bf902e857e7ce80846480c79ded99",
+        "name": "Sư Thành Sơn Hải",
+        "slug": "su-thanh-son-hai",
+        "origin_name": "Contenders",
+        "content": "Cuối thập niên 40 thế kỷ 20, dọc bờ sông Malacca tập trung nhiều cộng đồng người Hoa đến mưu sinh. Trải qua năm tháng gian truân, đồng hương giúp đỡ lẫn nhau, kiên cường phấn đấu. Sau khi có chỗ đứng, một bang hội đầy huyền thoại là &quot;Sơn Hải Bang&quot; dần trở thành trung tâm phát triển của người Hoa nơi đây.",
+        "type": "series",
+        "status": "ongoing",
+        "poster_url": "https://phimimg.com/upload/vod/20250502-1/dcdf67108a6973b891d33c48c642d07a.jpg",
+        "thumb_url": "https://phimimg.com/upload/vod/20250502-1/ab626d33ab9ddde6d009e793af1f84d8.jpg",
+        "is_copyright": false,
+        "sub_docquyen": false,
+        "chieurap": false,
+        "trailer_url": "https://www.youtube.com/watch?v=zczIUDkbo3o",
+        "time": "22 phút/tập",
+        "episode_current": "Tập 30",
+        "episode_total": "49",
+        "quality": "FHD",
+        "lang": "Vietsub",
+        "notify": "",
+        "showtimes": "",
+        "year": 2025,
+        "view": 0,
+        "actor": [
+          "Nguy Tử",
+          "Dương Húc Văn",
+          "Vương Tử Vy",
+          "Nhạc Lệ Na"
+        ],
+        "director": [
+          "Cự Hưng Mậu"
+        ],
+        "category": [
+          {
+            "id": "37a7b38b6184a5ebd3c43015aa20709d",
+            "name": "Chính Kịch",
+            "slug": "chinh-kich"
+          },
+          {
+            "id": "bb2b4b030608ca5984c8dd0770f5b40b",
+            "name": "Tình Cảm",
+            "slug": "tinh-cam"
+          },
+          {
+            "id": "a7b065b92ad356387ef2e075dee66529",
+            "name": "Tâm Lý",
+            "slug": "tam-ly"
+          }
+        ],
+        "country": [
+          {
+            "id": "3e075636c731fe0f889c69e0bf82c083",
+            "name": "Trung Quốc",
+            "slug": "trung-quoc"
+          }
+        ]
+      },
+      "episodes": [
+        {
+          "server_name": "#Hà Nội (Vietsub)",
+          "server_data": [
+            {
+              "name": "Tập 01",
+              "slug": "tap-01",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 01",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250502/HvDmUJ8f/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250502/HvDmUJ8f/index.m3u8"
+            },
+            {
+              "name": "Tập 02",
+              "slug": "tap-02",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 02",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250502/Rf2k7DCM/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250502/Rf2k7DCM/index.m3u8"
+            },
+            {
+              "name": "Tập 03",
+              "slug": "tap-03",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 03",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s4.phim1280.tv/20250502/WIhIc6Ai/index.m3u8",
+              "link_m3u8": "https://s4.phim1280.tv/20250502/WIhIc6Ai/index.m3u8"
+            },
+            {
+              "name": "Tập 04",
+              "slug": "tap-04",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 04",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s4.phim1280.tv/20250502/ORNSjolT/index.m3u8",
+              "link_m3u8": "https://s4.phim1280.tv/20250502/ORNSjolT/index.m3u8"
+            },
+            {
+              "name": "Tập 05",
+              "slug": "tap-05",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 05",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250503/P32suNfV/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250503/P32suNfV/index.m3u8"
+            },
+            {
+              "name": "Tập 06",
+              "slug": "tap-06",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 06",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250503/NK1AQelL/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250503/NK1AQelL/index.m3u8"
+            },
+            {
+              "name": "Tập 07",
+              "slug": "tap-07",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 07",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s4.phim1280.tv/20250504/dKQZevmQ/index.m3u8",
+              "link_m3u8": "https://s4.phim1280.tv/20250504/dKQZevmQ/index.m3u8"
+            },
+            {
+              "name": "Tập 08",
+              "slug": "tap-08",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 08",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s4.phim1280.tv/20250504/WVfIYIVG/index.m3u8",
+              "link_m3u8": "https://s4.phim1280.tv/20250504/WVfIYIVG/index.m3u8"
+            },
+            {
+              "name": "Tập 09",
+              "slug": "tap-09",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 09",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250505/b5HBCLJS/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250505/b5HBCLJS/index.m3u8"
+            },
+            {
+              "name": "Tập 10",
+              "slug": "tap-10",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 10",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250505/YyrZZa1A/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250505/YyrZZa1A/index.m3u8"
+            },
+            {
+              "name": "Tập 11",
+              "slug": "tap-11",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 11",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s4.phim1280.tv/20250506/Dzpuvm0N/index.m3u8",
+              "link_m3u8": "https://s4.phim1280.tv/20250506/Dzpuvm0N/index.m3u8"
+            },
+            {
+              "name": "Tập 12",
+              "slug": "tap-12",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 12",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s4.phim1280.tv/20250506/xNvjDQoT/index.m3u8",
+              "link_m3u8": "https://s4.phim1280.tv/20250506/xNvjDQoT/index.m3u8"
+            },
+            {
+              "name": "Tập 13",
+              "slug": "tap-13",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 13",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s4.phim1280.tv/20250507/YrhgZX0Q/index.m3u8",
+              "link_m3u8": "https://s4.phim1280.tv/20250507/YrhgZX0Q/index.m3u8"
+            },
+            {
+              "name": "Tập 14",
+              "slug": "tap-14",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 14",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s4.phim1280.tv/20250507/kIJbihNK/index.m3u8",
+              "link_m3u8": "https://s4.phim1280.tv/20250507/kIJbihNK/index.m3u8"
+            },
+            {
+              "name": "Tập 15",
+              "slug": "tap-15",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 15",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250508/gSneX2pB/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250508/gSneX2pB/index.m3u8"
+            },
+            {
+              "name": "Tập 16",
+              "slug": "tap-16",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 16",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250508/2cE22Q7x/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250508/2cE22Q7x/index.m3u8"
+            },
+            {
+              "name": "Tập 17",
+              "slug": "tap-17",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 17",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250509/1MpXAgJF/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250509/1MpXAgJF/index.m3u8"
+            },
+            {
+              "name": "Tập 18",
+              "slug": "tap-18",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 18",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250509/XccPbQ8f/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250509/XccPbQ8f/index.m3u8"
+            },
+            {
+              "name": "Tập 19",
+              "slug": "tap-19",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 19",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s4.phim1280.tv/20250509/jzYmapsm/index.m3u8",
+              "link_m3u8": "https://s4.phim1280.tv/20250509/jzYmapsm/index.m3u8"
+            },
+            {
+              "name": "Tập 20",
+              "slug": "tap-20",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 20",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s4.phim1280.tv/20250509/wcVfD6x3/index.m3u8",
+              "link_m3u8": "https://s4.phim1280.tv/20250509/wcVfD6x3/index.m3u8"
+            },
+            {
+              "name": "Tập 21",
+              "slug": "tap-21",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 21",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250511/wOhiH6nM/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250511/wOhiH6nM/index.m3u8"
+            },
+            {
+              "name": "Tập 22",
+              "slug": "tap-22",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 22",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250511/KmXrasZQ/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250511/KmXrasZQ/index.m3u8"
+            },
+            {
+              "name": "Tập 23",
+              "slug": "tap-23",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 23",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250511/2EwNwsRU/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250511/2EwNwsRU/index.m3u8"
+            },
+            {
+              "name": "Tập 24",
+              "slug": "tap-24",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 24",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250511/DfGlpSes/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250511/DfGlpSes/index.m3u8"
+            },
+            {
+              "name": "Tập 25",
+              "slug": "tap-25",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 25",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250513/Q52xhS1p/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250513/Q52xhS1p/index.m3u8"
+            },
+            {
+              "name": "Tập 26",
+              "slug": "tap-26",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 26",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250513/dpBMyypb/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250513/dpBMyypb/index.m3u8"
+            },
+            {
+              "name": "Tập 27",
+              "slug": "tap-27",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 27",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250513/9oFp94g8/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250513/9oFp94g8/index.m3u8"
+            },
+            {
+              "name": "Tập 28",
+              "slug": "tap-28",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 28",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250513/dyC9EJ3p/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250513/dyC9EJ3p/index.m3u8"
+            },
+            {
+              "name": "Tập 29",
+              "slug": "tap-29",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 29",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250515/X4hFFEEx/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250515/X4hFFEEx/index.m3u8"
+            },
+            {
+              "name": "Tập 30",
+              "slug": "tap-30",
+              "filename": "Sư Thành Sơn Hải - Contenders - 2025 - 1080p - Vietsub - Tập 30",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250515/rXTvXGy4/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250515/rXTvXGy4/index.m3u8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "status": true,
+      "msg": "",
+      "movie": {
+        "tmdb": {
+          "type": "movie",
+          "id": "977294",
+          "season": null,
+          "vote_average": 0,
+          "vote_count": 0
+        },
+        "imdb": {
+          "id": null
+        },
+        "created": {
+          "time": "2025-05-13T21:04:19.000Z"
+        },
+        "modified": {
+          "time": "2025-05-13T21:41:15.000Z"
+        },
+        "_id": "353b78669dd07c3d95ea4acbe7130488",
+        "name": "Chiến Binh Thép",
+        "slug": "chien-binh-thep",
+        "origin_name": "Tin Soldier",
+        "content": "&quot;Tin Soldier&quot; kể về một tổ chức bán quân sự bí ẩn do một thủ lĩnh có sức lôi cuốn tên là Bokushi (Jamie Foxx) đứng đầu. Ông ta chiêu mộ các cựu binh bị xã hội bỏ rơi, hứa hẹn cho họ một cuộc sống mới và đầy mục đích — nhưng thực chất đang thao túng họ cho những mục tiêu nguy hiểm.Một người lính từng bị tổ chức này cuốn vào (Scott Eastwood) quyết định đứng lên chống lại, hợp tác với một đặc vụ kỳ cựu (Robert De Niro) được chính phủ cử đi truy quét Bokushi. Cả hai lao vào một cuộc chiến cam go, không chỉ với kẻ thù bên ngoài, mà còn với những tổn thương tâm lý chiến tranh và niềm tin bị bóp méo.",
+        "type": "single",
+        "status": "completed",
+        "poster_url": "https://phimimg.com/upload/vod/20250513-1/930a520156695783081ea1d377cc56e4.jpg",
+        "thumb_url": "https://phimimg.com/upload/vod/20250513-1/fe7676ab727a3e6d6b6e1c3a50ee3938.jpg",
+        "is_copyright": false,
+        "sub_docquyen": false,
+        "chieurap": false,
+        "trailer_url": "https://www.youtube.com/watch?v=LZUFTczZfG8",
+        "time": "87 phút",
+        "episode_current": "Full",
+        "episode_total": "1",
+        "quality": "FHD",
+        "lang": "Vietsub",
+        "notify": "",
+        "showtimes": "",
+        "year": 2025,
+        "view": 0,
+        "actor": [
+          "Scott Eastwood",
+          "Robert De Niro",
+          "Jamie Foxx",
+          "John Leguizamo",
+          "Nora Arnezeder",
+          "Shamier Anderson",
+          "Yul Vazquez",
+          "Rita Ora",
+          "Saïd Taghmaoui",
+          "Eire Farrell",
+          "Alexa Feinstein",
+          "Xen Sams",
+          "Laurence Mason",
+          "Joey Bicicchi",
+          "Christian George",
+          "Melanie Benz",
+          "Julanne Chidi Hill"
+        ],
+        "director": [
+          "Brad Furman"
+        ],
+        "category": [
+          {
+            "id": "9822be111d2ccc29c7172c78b8af8ff5",
+            "name": "Hành Động",
+            "slug": "hanh-dong"
+          },
+          {
+            "id": "a7b065b92ad356387ef2e075dee66529",
+            "name": "Tâm Lý",
+            "slug": "tam-ly"
+          }
+        ],
+        "country": [
+          {
+            "id": "74d9fa92f4dea9ecea8fc2233dc7921a",
+            "name": "Âu Mỹ",
+            "slug": "au-my"
+          },
+          {
+            "id": "932bbaca386ee0436ad0159117eabae4",
+            "name": "Anh",
+            "slug": "anh"
+          }
+        ]
+      },
+      "episodes": [
+        {
+          "server_name": "#Hà Nội (Vietsub)",
+          "server_data": [
+            {
+              "name": "Full",
+              "slug": "full",
+              "filename": "Chiến Binh Thép - Tin Soldier - 2025 - 1080p - Vietsub - Full",
+              "link_embed": "https://player.phimapi.com/player/?url=https://s5.phim1280.tv/20250513/5lCjtZSQ/index.m3u8",
+              "link_m3u8": "https://s5.phim1280.tv/20250513/5lCjtZSQ/index.m3u8"
+            }
+          ]
+        }
+      ]
+    }
+]

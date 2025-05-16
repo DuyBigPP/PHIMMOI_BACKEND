@@ -1,0 +1,1788 @@
+[
+  {
+    "status": true,
+    "msg": "",
+    "movie": {
+      "tmdb": {
+        "type": null,
+        "id": null,
+        "season": null,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      "imdb": {
+        "id": null
+      },
+      "created": {
+        "time": "2023-09-13T13:06:56.000Z"
+      },
+      "modified": {
+        "time": "2023-09-13T14:02:56.000Z"
+      },
+      "_id": "26657d5ff9020d2abefe558796b99584",
+      "name": "Ninja Rùa: Hỗn Loạn Tuổi Dậy Thì",
+      "slug": "ninja-rua-hon-loan-tuoi-day-thi",
+      "origin_name": "Teenage Mutant Ninja Turtles: Mutant Mayhem",
+      "content": "Sau nhiều năm được che chở khỏi thế giới loài người, anh em nhà Rùa lên đường chiếm được cảm tình của người dân New York và được chấp nhận như những thanh thiếu niên bình thường thông qua những hành động anh hùng. Người bạn mới April O&#39;Neil giúp họ đương đầu với một tổ chức tội phạm bí ẩn, nhưng họ sớm gặp rắc rối khi một đội quân dị nhân tấn công họ.",
+      "type": "hoathinh",
+      "status": "completed",
+      "poster_url": "https://phimimg.com/upload/vod/20230913-1/7ffef16d3b6e79ec3759b5f4ad068c0f.jpg",
+      "thumb_url": "https://phimimg.com/upload/vod/20230913-1/82ab720678300ccc28245d37c9f6047b.jpg",
+      "is_copyright": false,
+      "sub_docquyen": false,
+      "chieurap": false,
+      "trailer_url": "",
+      "time": "100 phút",
+      "episode_current": "",
+      "episode_total": "1",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "notify": "",
+      "showtimes": "",
+      "year": 2023,
+      "view": 15,
+      "actor": [
+        "Micah Abbey",
+        "Shamon Brown Jr.",
+        "Nicolas Cantu",
+        "Brady Noon",
+        "Ayo Edebiri",
+        "Maya Rudolph",
+        "John Cena",
+        "Seth Rogen",
+        "Rose Byrne",
+        "Natasia Demetriou"
+      ],
+      "director": [
+        "Jeff Rowe"
+      ],
+      "category": [
+        {
+          "id": "ba6fd52e5a3aca80eaaf1a3b50a182db",
+          "name": "Hài Hước",
+          "slug": "hai-huoc"
+        },
+        {
+          "id": "9822be111d2ccc29c7172c78b8af8ff5",
+          "name": "Hành Động",
+          "slug": "hanh-dong"
+        }
+      ],
+      "country": [
+        {
+          "id": "af5c50bf625c1da71838678a5cf37189",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "server_name": "#Hà Nội (Vietsub)",
+        "server_data": [
+          {
+            "name": "Full",
+            "slug": "full",
+            "filename": "Ninja Rùa: Hỗn Loạn Tuổi Dậy Thì - Teenage Mutant Ninja Turtles: Mutant Mayhem - 2023 - 1080p - Vietsub - Full",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230913/MadQHStQ/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230913/MadQHStQ/index.m3u8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "status": true,
+    "msg": "",
+    "movie": {
+      "tmdb": {
+        "type": null,
+        "id": null,
+        "season": null,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      "imdb": {
+        "id": null
+      },
+      "created": {
+        "time": "2023-09-13T11:33:53.000Z"
+      },
+      "modified": {
+        "time": "2023-09-13T12:14:16.000Z"
+      },
+      "_id": "f4b9ec30ad9f68f89b29639786cb62ef",
+      "name": "Năm Mươi Sắc Thái: Đen",
+      "slug": "nam-muoi-sac-thai-den",
+      "origin_name": "Fifty Shades Darker",
+      "content": "<span style=\"font-family: \">Phim bắt đầu khi chàng tỷ phú Christian muốn quay lại với Anastasia . Trước sự chân thành của Christian, Anastasia đã đồng ý lời đề nghị này, tuy nhiên cô yêu cầu phải có một thỏa thuận giữa hai người: Không có luật lệ, không có bí mật nào nữa. Trong lúc cả hai bắt đầu gây dựng được lòng tin tưởng và bền vững khi bên nhau, thì một “bóng ma” đến từ quá khứ của Christian bất chợt xuất hiện và quyết tâm hủy hoại mọi hy vọng vào tương lai của họ.</span>",
+      "type": "single",
+      "status": "completed",
+      "poster_url": "https://phimimg.com/upload/vod/20230913-1/8e6c37af7f2f69589804d27bc57bfe2b.jpg",
+      "thumb_url": "https://phimimg.com/upload/vod/20230913-1/a93169bde37b9507138a2e1ff6e3b4d8.jpg",
+      "is_copyright": false,
+      "sub_docquyen": false,
+      "chieurap": false,
+      "trailer_url": "",
+      "time": "118 phút",
+      "episode_current": "",
+      "episode_total": "1",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "notify": "",
+      "showtimes": "",
+      "year": 2017,
+      "view": 14,
+      "actor": [
+        "Dakota Johnson",
+        "Jamie Dornan",
+        "Eric Johnson",
+        "Eloise Mumford",
+        "Bella Heathcote",
+        "Rita Ora",
+        "Luke Grimes",
+        "Victor Rasuk",
+        "Max Martini",
+        "Bruce Altman"
+      ],
+      "director": [
+        "James Foley"
+      ],
+      "category": [
+        {
+          "id": "37a7b38b6184a5ebd3c43015aa20709d",
+          "name": "Chính Kịch",
+          "slug": "chinh-kich"
+        },
+        {
+          "id": "bb2b4b030608ca5984c8dd0770f5b40b",
+          "name": "Tình Cảm",
+          "slug": "tinh-cam"
+        },
+        {
+          "id": "4b4457a1af8554c282dc8ac41fd7b4a1",
+          "name": "Phim 18+",
+          "slug": "phim-18"
+        }
+      ],
+      "country": [
+        {
+          "id": "af5c50bf625c1da71838678a5cf37189",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "server_name": "#Hà Nội (Vietsub)",
+        "server_data": [
+          {
+            "name": "Full",
+            "slug": "full",
+            "filename": "Năm Mươi Sắc Thái: Đen - Fifty Shades Darker - 2017 - 1080p - Vietsub - Full",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230913/koztKkP5/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230913/koztKkP5/index.m3u8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "status": true,
+    "msg": "",
+    "movie": {
+      "tmdb": {
+        "type": null,
+        "id": null,
+        "season": null,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      "imdb": {
+        "id": null
+      },
+      "created": {
+        "time": "2023-09-13T13:11:00.000Z"
+      },
+      "modified": {
+        "time": "2023-09-13T14:02:20.000Z"
+      },
+      "_id": "ed3d2c21991e3bef5e069713af9fa6ca",
+      "name": "Ngũ Thử Đại Náo Đông Kinh",
+      "slug": "ngu-thu-dai-nao-dong-kinh",
+      "origin_name": "The Invincible Constable",
+      "content": "Dựa trên các nhân vật trong tiểu thuyết Trung Quốc thế kỷ 19 Thất anh hùng và Ngũ dũng sĩ. Zhan Zhao, Nam anh hùng, được Hoàng đế Renzong phong làm Chúa mèo. Wu Yi, được biết đến với cái tên Five Rats of Sky Island, đã rất thất vọng khi nghe điều này. Bạch Ngọc Đường, con chuột gấm thứ năm, vô cùng tức giận. Anh thề sẽ cạnh tranh với Zhan Zhao. Đông Đô Hỏa Tiên đang dâng lễ tế đất nước thái bình thịnh vượng. Tượng Hỏa Tiên được ban tặng để cầu nguyện cho thế giới. Bệ hạ ra lệnh cho Zhan Zhao bảo vệ nó. Khi Bai Yutang biết được điều này, anh ta đã cố gắng đánh cắp Tượng Hỏa Bất Tử vì phẩm giá của Ngũ Chuột. Hai anh em lần lượt đến nhưng lại vô tình vướng vào một vụ án trả thù bí ẩn.",
+      "type": "single",
+      "status": "completed",
+      "poster_url": "https://phimimg.com/upload/vod/20230913-1/2a6ab0cb3ba955e65bd32d0bce2223e8.jpg",
+      "thumb_url": "https://phimimg.com/upload/vod/20230913-1/1c308c57737fe05b4683c549027fc753.jpg",
+      "is_copyright": false,
+      "sub_docquyen": false,
+      "chieurap": false,
+      "trailer_url": "",
+      "time": "71 phút",
+      "episode_current": "",
+      "episode_total": "1",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "notify": "",
+      "showtimes": "",
+      "year": 2022,
+      "view": 14,
+      "actor": [
+        "Ivan Xu",
+        "Leif Ye",
+        "Wang Yuwei",
+        "Li Shaoting",
+        "Yan Yanlong",
+        "Chen Xianmin",
+        "Lu Shun"
+      ],
+      "director": [
+        "Ma Xiaolong"
+      ],
+      "category": [
+        {
+          "id": "9822be111d2ccc29c7172c78b8af8ff5",
+          "name": "Hành Động",
+          "slug": "hanh-dong"
+        },
+        {
+          "id": "2fb53017b3be83cd754a08adab3e916c",
+          "name": "Bí Ẩn",
+          "slug": "bi-an"
+        },
+        {
+          "id": "3a17c7283b71fa84e5a8d76fb790ed3e",
+          "name": "Cổ Trang",
+          "slug": "co-trang"
+        }
+      ],
+      "country": [
+        {
+          "id": "92aa3c93de523a414a520399bb6a4304",
+          "name": "Trung Quốc",
+          "slug": "trung-quoc"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "server_name": "#Hà Nội (Vietsub)",
+        "server_data": [
+          {
+            "name": "Full",
+            "slug": "full",
+            "filename": "Ngũ Thử Đại Náo Đông Kinh - The Invincible Constable - 2022 - 1080p - Vietsub - Full",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230913/cNrJGlxY/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230913/cNrJGlxY/index.m3u8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "status": true,
+    "msg": "",
+    "movie": {
+      "tmdb": {
+        "type": null,
+        "id": null,
+        "season": null,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      "imdb": {
+        "id": null
+      },
+      "created": {
+        "time": "2023-09-12T10:43:21.000Z"
+      },
+      "modified": {
+        "time": "2023-09-12T14:38:40.000Z"
+      },
+      "_id": "66f041e16a60928b05a7e228a89c3799",
+      "name": "Bộ Tứ Siêu Đẳng",
+      "slug": "bo-tu-sieu-dang-2005",
+      "origin_name": "Fantastic Four",
+      "content": "<span style=\"font-family: \">Bộ phim Fantastic Four (Bộ Tứ Siêu Đẳng) được chuyển thể từ truyện tranh nói về một nhóm 4 người có những năng lực siêu nhiên. Reed Richards (có thể tự kéo dài thân hình), Susan Storm (có khả năng tàng hình và biến vật thể tàng hình), Johnny Storm (có thể tạo ra lửa từ đầu ngón tay và biến thành ngọn đuốc) và Ben Grim (có sức mạnh vô địch tiềm tàng dưới lớp vỏ của một con quái vật).</span>",
+      "type": "single",
+      "status": "completed",
+      "poster_url": "https://phimimg.com/upload/vod/20230912-1/85ab24dcbbc81ad028af739785aea1b1.jpg",
+      "thumb_url": "https://phimimg.com/upload/vod/20230912-1/e9b638eee0937169190cd65d39b33043.jpg",
+      "is_copyright": false,
+      "sub_docquyen": false,
+      "chieurap": false,
+      "trailer_url": "",
+      "time": "106 phút",
+      "episode_current": "Full",
+      "episode_total": "1",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "notify": "",
+      "showtimes": "",
+      "year": 2005,
+      "view": 24,
+      "actor": [
+        "Ioan Gruffudd",
+        "Jessica Alba",
+        "Chris Evans",
+        "Michael Chiklis",
+        "Julian McMahon",
+        "Hamish Linklater",
+        "Kerry Washington",
+        "Laurie Holden",
+        "David Parker"
+      ],
+      "director": [
+        "Tim Story"
+      ],
+      "category": [
+        {
+          "id": "9822be111d2ccc29c7172c78b8af8ff5",
+          "name": "Hành Động",
+          "slug": "hanh-dong"
+        },
+        {
+          "id": "66c78b23908113d478d8d85390a244b4",
+          "name": "Phiêu Lưu",
+          "slug": "phieu-luu"
+        },
+        {
+          "id": "0bcf4077916678de9b48c89221fcf8ae",
+          "name": "Khoa Học",
+          "slug": "khoa-hoc"
+        },
+        {
+          "id": "68564911f00849030f9c9c144ea1b931",
+          "name": "Viễn Tưởng",
+          "slug": "vien-tuong"
+        }
+      ],
+      "country": [
+        {
+          "id": "af5c50bf625c1da71838678a5cf37189",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "server_name": "#Hà Nội (Vietsub)",
+        "server_data": [
+          {
+            "name": "Full",
+            "slug": "full",
+            "filename": "Bộ Tứ Siêu Đẳng - Fantastic Four - 2005 - 1080p - Vietsub - Full",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230912/fFNgw9WO/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230912/fFNgw9WO/index.m3u8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "status": true,
+    "msg": "",
+    "movie": {
+      "tmdb": {
+        "type": null,
+        "id": null,
+        "season": null,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      "imdb": {
+        "id": null
+      },
+      "created": {
+        "time": "2023-09-06T19:34:22.000Z"
+      },
+      "modified": {
+        "time": "2023-09-11T00:11:36.000Z"
+      },
+      "_id": "e4da3b7fbbce2345d7772b0674a318d5",
+      "name": "Quỷ Dữ Thức Tỉnh",
+      "slug": "quy-du-thuc-tinh",
+      "origin_name": "The Last Voyage of the Demeter",
+      "content": "Một đoàn thủy thủ tham gia vào nhiệm vụ vận chuyển một “đơn hàng” bí ẩn từ Carpathia đến London trên con tàu Demeter huyền thoại. Hải trình tưởng chừng như đơn giản thế nhưng lại ẩn chứa một cơn ác mộng kinh hoàng khi “đơn hàng” họ vận chuyển đang dần thức tỉnh. Nỗi khiếp sợ chính thức mở ra khi một vài thủy thủ bắt đầu phát hiện những dấu hiệu bất thường trên tàu, sự ra đi hàng loạt của động vật, cho đến cái chết bí ẩn của người thủy thủ đã khiến cho chuyến hành trình đến London trở nên ám ảnh hơn bao giờ hết. Giờ đây, tất cả mọi người phải tranh giành sự sống với mọi giác quan để chống lại con quái vật khát máu đã thức tỉnh trên tàu – Dracula. Liệu họ có cập bến thành công? Hay kết cục chỉ còn là sự chết chóc và một con tàu vô chủ?",
+      "type": "single",
+      "status": "completed",
+      "poster_url": "https://phimimg.com/upload/vod/20230906-1/9a2c5c49c034fa6a99d4b0daf438efec.jpg",
+      "thumb_url": "",
+      "is_copyright": false,
+      "sub_docquyen": false,
+      "chieurap": false,
+      "trailer_url": "",
+      "time": "119 Phút",
+      "episode_current": "Full",
+      "episode_total": "1",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "notify": "",
+      "showtimes": "",
+      "year": 2023,
+      "view": 21,
+      "actor": [
+        "Corey Hawkins",
+        "Aisling Franciosi",
+        "Liam Cunningham",
+        "David Dastmalchian",
+        "Chris Walley",
+        "Jon Jon Briones",
+        "Stefan Kapičić",
+        "Martin Furulund",
+        "Nikolai Nikolaeff",
+        "Woody Norman"
+      ],
+      "director": [
+        "André Øvredal"
+      ],
+      "category": [
+        {
+          "id": "4db8d7d4b9873981e3eeb76d02997d58",
+          "name": "Kinh Dị",
+          "slug": "kinh-di"
+        }
+      ],
+      "country": [
+        {
+          "id": "74d9fa92f4dea9ecea8fc2233dc7921a",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        },
+        {
+          "id": "aadd510492662beef1a980624b26c685",
+          "name": "Ấn Độ",
+          "slug": "an-do"
+        },
+        {
+          "id": "932bbaca386ee0436ad0159117eabae4",
+          "name": "Anh",
+          "slug": "anh"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "server_name": "#Hà Nội (Vietsub)",
+        "server_data": [
+          {
+            "name": "Full",
+            "slug": "full",
+            "filename": "Quỷ Dữ Thức Tỉnh - The Last Voyage of the Demeter - 2023 - 1080p - Vietsub - Full",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230906/VAQRdk25/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230906/VAQRdk25/index.m3u8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "status": true,
+    "msg": "",
+    "movie": {
+      "tmdb": {
+        "type": null,
+        "id": null,
+        "season": null,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      "imdb": {
+        "id": null
+      },
+      "created": {
+        "time": "2023-09-11T11:58:05.000Z"
+      },
+      "modified": {
+        "time": "2023-09-11T16:31:39.000Z"
+      },
+      "_id": "642e92efb79421734881b53e1e1b18b6",
+      "name": "Tân Thần Điêu Đại Hiệp",
+      "slug": "tan-than-dieu-dai-hiep",
+      "origin_name": "The Romance of the Condor Heroes",
+      "content": "Bối cảnh của Thần điêu hiệp lữ là vào cuối thời Nam Tống, khi quân Mông Cổ đã lớn mạnh, tiêu diệt hầu hết châu Á, châu Âu, đang trực tiếp uy hiếp an nguy của Nam Tống. Câu chuyện xoay quanh tình yêu của hai nhân vật chính là Dương Quá và Tiểu Long Nữ giữa những cuộc chiến tang thương đẫm máu cả trên giang hồ lẫn chiến trường.",
+      "type": "series",
+      "status": "completed",
+      "poster_url": "https://phimimg.com/upload/vod/20230911-1/ee0d59458c3ec16ac71fa036faf2f412.jpg",
+      "thumb_url": "",
+      "is_copyright": false,
+      "sub_docquyen": false,
+      "chieurap": false,
+      "trailer_url": "",
+      "time": "46 phút/tập",
+      "episode_current": "Hoàn Tất (52/52)",
+      "episode_total": "52",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "notify": "",
+      "showtimes": "",
+      "year": 2014,
+      "view": 21,
+      "actor": [
+        "Chen Xiao",
+        "Michelle Chen",
+        "Mao Xiaotong",
+        "Elvis Han",
+        "Zong Feng Yan",
+        "Yang Rong",
+        "Leo Wu",
+        "Zhang Xinyu",
+        "Zhang Meng"
+      ],
+      "director": [
+        "Đang cập nhật"
+      ],
+      "category": [
+        {
+          "id": "9822be111d2ccc29c7172c78b8af8ff5",
+          "name": "Hành Động",
+          "slug": "hanh-dong"
+        },
+        {
+          "id": "66c78b23908113d478d8d85390a244b4",
+          "name": "Phiêu Lưu",
+          "slug": "phieu-luu"
+        },
+        {
+          "id": "37a7b38b6184a5ebd3c43015aa20709d",
+          "name": "Chính Kịch",
+          "slug": "chinh-kich"
+        }
+      ],
+      "country": [
+        {
+          "id": "92aa3c93de523a414a520399bb6a4304",
+          "name": "Trung Quốc",
+          "slug": "trung-quoc"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "server_name": "#Hà Nội (Vietsub)",
+        "server_data": [
+          {
+            "name": "Tập 1",
+            "slug": "tap-1",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 1",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/r622kPZW/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/r622kPZW/index.m3u8"
+          },
+          {
+            "name": "Tập 2",
+            "slug": "tap-2",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 2",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/b5gQBZBb/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/b5gQBZBb/index.m3u8"
+          },
+          {
+            "name": "Tập 3",
+            "slug": "tap-3",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 3",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/jiiylm7m/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/jiiylm7m/index.m3u8"
+          },
+          {
+            "name": "Tập 4",
+            "slug": "tap-4",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 4",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/3LmHlPMh/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/3LmHlPMh/index.m3u8"
+          },
+          {
+            "name": "Tập 5",
+            "slug": "tap-5",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 5",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/cpHmmLTK/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/cpHmmLTK/index.m3u8"
+          },
+          {
+            "name": "Tập 6",
+            "slug": "tap-6",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 6",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/jJRAgIem/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/jJRAgIem/index.m3u8"
+          },
+          {
+            "name": "Tập 7",
+            "slug": "tap-7",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 7",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/JAruzAJC/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/JAruzAJC/index.m3u8"
+          },
+          {
+            "name": "Tập 8",
+            "slug": "tap-8",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 8",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/tlcsScc7/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/tlcsScc7/index.m3u8"
+          },
+          {
+            "name": "Tập 9",
+            "slug": "tap-9",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 9",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/r2c9KaaZ/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/r2c9KaaZ/index.m3u8"
+          },
+          {
+            "name": "Tập 10",
+            "slug": "tap-10",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 10",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/lIS7i6Bg/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/lIS7i6Bg/index.m3u8"
+          },
+          {
+            "name": "Tập 11",
+            "slug": "tap-11",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 11",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/ReGpo219/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/ReGpo219/index.m3u8"
+          },
+          {
+            "name": "Tập 12",
+            "slug": "tap-12",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 12",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/WkVzwWqr/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/WkVzwWqr/index.m3u8"
+          },
+          {
+            "name": "Tập 13",
+            "slug": "tap-13",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 13",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/5fjxTsmV/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/5fjxTsmV/index.m3u8"
+          },
+          {
+            "name": "Tập 14",
+            "slug": "tap-14",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 14",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/PkASCttO/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/PkASCttO/index.m3u8"
+          },
+          {
+            "name": "Tập 15",
+            "slug": "tap-15",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 15",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/UO3tDJxR/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/UO3tDJxR/index.m3u8"
+          },
+          {
+            "name": "Tập 16",
+            "slug": "tap-16",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 16",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/H0qqA2Hp/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/H0qqA2Hp/index.m3u8"
+          },
+          {
+            "name": "Tập 17",
+            "slug": "tap-17",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 17",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/omfdHC38/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/omfdHC38/index.m3u8"
+          },
+          {
+            "name": "Tập 18",
+            "slug": "tap-18",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 18",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/QTl8LzU1/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/QTl8LzU1/index.m3u8"
+          },
+          {
+            "name": "Tập 19",
+            "slug": "tap-19",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 19",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/KObfVRsN/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/KObfVRsN/index.m3u8"
+          },
+          {
+            "name": "Tập 20",
+            "slug": "tap-20",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 20",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/r3IEs0nk/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/r3IEs0nk/index.m3u8"
+          },
+          {
+            "name": "Tập 21",
+            "slug": "tap-21",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 21",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/MGWxh9Iv/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/MGWxh9Iv/index.m3u8"
+          },
+          {
+            "name": "Tập 22",
+            "slug": "tap-22",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 22",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/qQwGgH1E/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/qQwGgH1E/index.m3u8"
+          },
+          {
+            "name": "Tập 23",
+            "slug": "tap-23",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 23",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/cuivJP3L/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/cuivJP3L/index.m3u8"
+          },
+          {
+            "name": "Tập 24",
+            "slug": "tap-24",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 24",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/LF4SkBV0/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/LF4SkBV0/index.m3u8"
+          },
+          {
+            "name": "Tập 25",
+            "slug": "tap-25",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 25",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/5yvti0rp/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/5yvti0rp/index.m3u8"
+          },
+          {
+            "name": "Tập 26",
+            "slug": "tap-26",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 26",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/67DHCXEl/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/67DHCXEl/index.m3u8"
+          },
+          {
+            "name": "Tập 27",
+            "slug": "tap-27",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 27",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/DHueN18y/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/DHueN18y/index.m3u8"
+          },
+          {
+            "name": "Tập 28",
+            "slug": "tap-28",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 28",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/p33CxV4u/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/p33CxV4u/index.m3u8"
+          },
+          {
+            "name": "Tập 29",
+            "slug": "tap-29",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 29",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/rJEhbxVn/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/rJEhbxVn/index.m3u8"
+          },
+          {
+            "name": "Tập 30",
+            "slug": "tap-30",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 30",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/eaoNpYWj/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/eaoNpYWj/index.m3u8"
+          },
+          {
+            "name": "Tập 31",
+            "slug": "tap-31",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 31",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/7XeZWopD/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/7XeZWopD/index.m3u8"
+          },
+          {
+            "name": "Tập 32",
+            "slug": "tap-32",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 32",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/H1j5i8lT/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/H1j5i8lT/index.m3u8"
+          },
+          {
+            "name": "Tập 33",
+            "slug": "tap-33",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 33",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/CGvLO9h5/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/CGvLO9h5/index.m3u8"
+          },
+          {
+            "name": "Tập 34",
+            "slug": "tap-34",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 34",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/MygyGmCB/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/MygyGmCB/index.m3u8"
+          },
+          {
+            "name": "Tập 35",
+            "slug": "tap-35",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 35",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/LRshuNoj/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/LRshuNoj/index.m3u8"
+          },
+          {
+            "name": "Tập 36",
+            "slug": "tap-36",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 36",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/582jtEn7/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/582jtEn7/index.m3u8"
+          },
+          {
+            "name": "Tập 37",
+            "slug": "tap-37",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 37",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/Cw6e5voq/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/Cw6e5voq/index.m3u8"
+          },
+          {
+            "name": "Tập 38",
+            "slug": "tap-38",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 38",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/kRxajmzY/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/kRxajmzY/index.m3u8"
+          },
+          {
+            "name": "Tập 39",
+            "slug": "tap-39",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 39",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/eDRsjflq/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/eDRsjflq/index.m3u8"
+          },
+          {
+            "name": "Tập 40",
+            "slug": "tap-40",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 40",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/iznEPS4o/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/iznEPS4o/index.m3u8"
+          },
+          {
+            "name": "Tập 41",
+            "slug": "tap-41",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 41",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/pSnTisep/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/pSnTisep/index.m3u8"
+          },
+          {
+            "name": "Tập 42",
+            "slug": "tap-42",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 42",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/cCanInVy/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/cCanInVy/index.m3u8"
+          },
+          {
+            "name": "Tập 43",
+            "slug": "tap-43",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 43",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/XWWaII4D/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/XWWaII4D/index.m3u8"
+          },
+          {
+            "name": "Tập 44",
+            "slug": "tap-44",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 44",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/ruEG09Eq/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/ruEG09Eq/index.m3u8"
+          },
+          {
+            "name": "Tập 45",
+            "slug": "tap-45",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 45",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/Rs5FzY7U/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/Rs5FzY7U/index.m3u8"
+          },
+          {
+            "name": "Tập 46",
+            "slug": "tap-46",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 46",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/zK0DAg2g/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/zK0DAg2g/index.m3u8"
+          },
+          {
+            "name": "Tập 47",
+            "slug": "tap-47",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 47",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/2oYfKYef/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/2oYfKYef/index.m3u8"
+          },
+          {
+            "name": "Tập 48",
+            "slug": "tap-48",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 48",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/tMp3Mj61/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/tMp3Mj61/index.m3u8"
+          },
+          {
+            "name": "Tập 49",
+            "slug": "tap-49",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 49",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/Hn3IUOZc/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/Hn3IUOZc/index.m3u8"
+          },
+          {
+            "name": "Tập 50",
+            "slug": "tap-50",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 50",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/9TnXrcTX/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/9TnXrcTX/index.m3u8"
+          },
+          {
+            "name": "Tập 51",
+            "slug": "tap-51",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 51",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/ajrEGWk9/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/ajrEGWk9/index.m3u8"
+          },
+          {
+            "name": "Tập 52.END",
+            "slug": "tap-52end",
+            "filename": "Tân Thần Điêu Đại Hiệp - The Romance of the Condor Heroes - 2014 - 1080p - Vietsub - Tập 52.END",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230911/12mWwcFY/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230911/12mWwcFY/index.m3u8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "status": true,
+    "msg": "",
+    "movie": {
+      "tmdb": {
+        "type": null,
+        "id": null,
+        "season": null,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      "imdb": {
+        "id": null
+      },
+      "created": {
+        "time": "2023-09-11T12:26:07.000Z"
+      },
+      "modified": {
+        "time": "2023-09-12T10:50:40.000Z"
+      },
+      "_id": "d82c8d1619ad8176d665453cfb2e55f0",
+      "name": "Người Tình Trong Mộng",
+      "slug": "nguoi-tinh-trong-mong-2012",
+      "origin_name": "Men in Hope",
+      "content": "Rudolf quyến rũ, vui vẻ tin chắc rằng sự không chung thủy là nền tảng cho một cuộc hôn nhân hạnh phúc, vì suy cho cùng, một người phụ nữ không muốn cảm thấy nhàm chán với bạn đời của mình.",
+      "type": "single",
+      "status": "completed",
+      "poster_url": "https://phimimg.com/upload/vod/20230911-1/68f18df7628f2e109a771572d76f47e8.jpg",
+      "thumb_url": "",
+      "is_copyright": false,
+      "sub_docquyen": false,
+      "chieurap": false,
+      "trailer_url": "",
+      "time": "110 phút",
+      "episode_current": "",
+      "episode_total": "1",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "notify": "",
+      "showtimes": "",
+      "year": 2011,
+      "view": 22,
+      "actor": [
+        "Bolek Polívka",
+        "Jiří Macháček",
+        "Petra Hřebíčková",
+        "Simona Stašová",
+        "Vica Kerekes",
+        "Lukáš Langmajer",
+        "Hynek Čermák",
+        "Filip Antonio",
+        "Michal Novotný"
+      ],
+      "director": [
+        "Jiří Vejdělek"
+      ],
+      "category": [
+        {
+          "id": "ba6fd52e5a3aca80eaaf1a3b50a182db",
+          "name": "Hài Hước",
+          "slug": "hai-huoc"
+        },
+        {
+          "id": "bb2b4b030608ca5984c8dd0770f5b40b",
+          "name": "Tình Cảm",
+          "slug": "tinh-cam"
+        }
+      ],
+      "country": [
+        {
+          "id": "2fe255994986c448c81c6c5b79b7348b",
+          "name": "Quốc Gia Khác",
+          "slug": "quoc-gia-khac"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "server_name": "#Hà Nội (Vietsub)",
+        "server_data": [
+          {
+            "name": "Full",
+            "slug": "full",
+            "filename": "Người Tình Trong Mộng - Men in Hope - 2011 - 1080p - Vietsub - Full",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230912/iywpyjjV/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230912/iywpyjjV/index.m3u8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "status": true,
+    "msg": "",
+    "movie": {
+      "tmdb": {
+        "type": null,
+        "id": null,
+        "season": null,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      "imdb": {
+        "id": null
+      },
+      "created": {
+        "time": "2023-09-10T00:40:55.000Z"
+      },
+      "modified": {
+        "time": "2023-09-10T01:01:55.000Z"
+      },
+      "_id": "e369853df766fa44e1ed0ff613f563bd",
+      "name": "Cú Trượt Dài",
+      "slug": "cu-truot-dai",
+      "origin_name": "Spinning Out",
+      "content": "Kat Baker là một vận động viên trượt băng đơn cấp độ cao đang phát triển, người chuẩn bị quay lại giày trượt của mình sau một cú ngã thảm khốc. Khi Kat nắm bắt cơ hội tiếp tục sự nghiệp vận động viên trượt băng đôi với một chàng trai hư tài năng, cô có nguy cơ phơi bày một bí mật được giữ kín có thể làm sáng tỏ toàn bộ cuộc đời cô.",
+      "type": "series",
+      "status": "completed",
+      "poster_url": "https://phimimg.com/upload/vod/20230910-1/af517e691ba8b94a73d870217bb19a71.jpg",
+      "thumb_url": "",
+      "is_copyright": false,
+      "sub_docquyen": false,
+      "chieurap": false,
+      "trailer_url": "",
+      "time": "46 phút/tập",
+      "episode_current": "Hoàn Tất (10/10)",
+      "episode_total": "10",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "notify": "",
+      "showtimes": "",
+      "year": 2020,
+      "view": 21,
+      "actor": [
+        "Kaya Scodelario",
+        "January Jones",
+        "Willow Shields",
+        "Evan Roderick",
+        "Sarah Wright",
+        "Svetlana Efremova",
+        "Mitchell Edwards",
+        "Will Kemp",
+        "Kaitlyn Leeb"
+      ],
+      "director": [
+        "Đang cập nhật"
+      ],
+      "category": [
+        {
+          "id": "37a7b38b6184a5ebd3c43015aa20709d",
+          "name": "Chính Kịch",
+          "slug": "chinh-kich"
+        }
+      ],
+      "country": [
+        {
+          "id": "af5c50bf625c1da71838678a5cf37189",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "server_name": "#Hà Nội (Vietsub)",
+        "server_data": [
+          {
+            "name": "Tập 1",
+            "slug": "tap-1",
+            "filename": "Cú Trượt Dài - Spinning Out - 2020 - 1080p - Vietsub - Tập 1",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230910/hFlSDWeB/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230910/hFlSDWeB/index.m3u8"
+          },
+          {
+            "name": "Tập 2",
+            "slug": "tap-2",
+            "filename": "Cú Trượt Dài - Spinning Out - 2020 - 1080p - Vietsub - Tập 2",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230910/mtIsQhnU/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230910/mtIsQhnU/index.m3u8"
+          },
+          {
+            "name": "Tập 3",
+            "slug": "tap-3",
+            "filename": "Cú Trượt Dài - Spinning Out - 2020 - 1080p - Vietsub - Tập 3",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230910/fAeHvRRS/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230910/fAeHvRRS/index.m3u8"
+          },
+          {
+            "name": "Tập 4",
+            "slug": "tap-4",
+            "filename": "Cú Trượt Dài - Spinning Out - 2020 - 1080p - Vietsub - Tập 4",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230910/5GJA4Cpp/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230910/5GJA4Cpp/index.m3u8"
+          },
+          {
+            "name": "Tập 5",
+            "slug": "tap-5",
+            "filename": "Cú Trượt Dài - Spinning Out - 2020 - 1080p - Vietsub - Tập 5",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230910/Rzo1Elwg/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230910/Rzo1Elwg/index.m3u8"
+          },
+          {
+            "name": "Tập 6",
+            "slug": "tap-6",
+            "filename": "Cú Trượt Dài - Spinning Out - 2020 - 1080p - Vietsub - Tập 6",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230910/0TmJN8ms/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230910/0TmJN8ms/index.m3u8"
+          },
+          {
+            "name": "Tập 7",
+            "slug": "tap-7",
+            "filename": "Cú Trượt Dài - Spinning Out - 2020 - 1080p - Vietsub - Tập 7",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230910/qEDffF0M/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230910/qEDffF0M/index.m3u8"
+          },
+          {
+            "name": "Tập 8",
+            "slug": "tap-8",
+            "filename": "Cú Trượt Dài - Spinning Out - 2020 - 1080p - Vietsub - Tập 8",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230910/ZfOsh2eA/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230910/ZfOsh2eA/index.m3u8"
+          },
+          {
+            "name": "Tập 9",
+            "slug": "tap-9",
+            "filename": "Cú Trượt Dài - Spinning Out - 2020 - 1080p - Vietsub - Tập 9",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230910/DMo2SIaP/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230910/DMo2SIaP/index.m3u8"
+          },
+          {
+            "name": "Tập 10",
+            "slug": "tap-10",
+            "filename": "Cú Trượt Dài - Spinning Out - 2020 - 1080p - Vietsub - Tập 10",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230910/B9K0NL6h/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230910/B9K0NL6h/index.m3u8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "status": true,
+    "msg": "",
+    "movie": {
+      "tmdb": {
+        "type": null,
+        "id": null,
+        "season": null,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      "imdb": {
+        "id": null
+      },
+      "created": {
+        "time": "2023-09-08T16:04:51.000Z"
+      },
+      "modified": {
+        "time": "2023-09-08T16:10:43.000Z"
+      },
+      "_id": "9bf31c7ff062936a96d3c8bd1f8f2ff3",
+      "name": "Hành Trình Của Xico",
+      "slug": "hanh-trinh-cua-xico",
+      "origin_name": "Xico's Journey",
+      "content": "Cô bé nọ cùng cậu bạn thân và một chú chó quyết cứu một ngọn núi khỏi công ty muốn khai thác vàng. Nhưng chìa khóa lại chẳng ở đâu xa, khi đã có chú chó thân thiết Xico.",
+      "type": "single",
+      "status": "completed",
+      "poster_url": "https://phimimg.com/upload/vod/20230908-1/d1736f025628eea193394cc758b6d542.jpg",
+      "thumb_url": "",
+      "is_copyright": false,
+      "sub_docquyen": false,
+      "chieurap": false,
+      "trailer_url": "",
+      "time": "86 phút",
+      "episode_current": "Full",
+      "episode_total": "1",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "notify": "",
+      "showtimes": "",
+      "year": 2021,
+      "view": 21,
+      "actor": [
+        "Verónica Alva",
+        "Pablo Gama Iturrarán “Mago Gamini”",
+        "Luis Ángel Jaramillo"
+      ],
+      "director": [
+        "Đang cập nhật"
+      ],
+      "category": [
+        {
+          "id": "252e74b4c832ddb4233d7499f5ed122e",
+          "name": "Âm Nhạc",
+          "slug": "am-nhac"
+        },
+        {
+          "id": "a2492d6cbc4d58f115406ca14e5ec7b6",
+          "name": "Gia Đình",
+          "slug": "gia-dinh"
+        }
+      ],
+      "country": [
+        {
+          "id": "8dbb07a18d46f63d8b3c8994d5ccc351",
+          "name": "Mexico",
+          "slug": "mexico"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "server_name": "#Hà Nội (Vietsub)",
+        "server_data": [
+          {
+            "name": "Full",
+            "slug": "full",
+            "filename": "Hành Trình Của Xico - Xico's Journey - 2021 - 1080p - Vietsub - Full",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230908/7Cxu9xOI/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230908/7Cxu9xOI/index.m3u8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "status": true,
+    "msg": "",
+    "movie": {
+      "tmdb": {
+        "type": null,
+        "id": null,
+        "season": null,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      "imdb": {
+        "id": null
+      },
+      "created": {
+        "time": "2023-09-10T13:38:14.000Z"
+      },
+      "modified": {
+        "time": "2023-09-10T13:41:17.000Z"
+      },
+      "_id": "3416a75f4cea9109507cacd8e2f2aefc",
+      "name": "Pony Bé Nhỏ: Thế Hệ Mới",
+      "slug": "pony-be-nho-the-he-moi",
+      "origin_name": "My Little Pony: A New Generation",
+      "content": "<span style=\"color: rgb(37, 37, 37); font-family: Roboto, arial, sans-serif; font-size: 18px; text-wrap: wrap;\">Equestria bị chia cắt. Nhưng một anh hùng có đôi mắt sáng ngời tin rằng Ngựa Non, Pegasi và Kỳ lân nên là bạn bè — và, từ tận đáy lòng, cô quyết tâm chứng minh điều đó.</span>",
+      "type": "hoathinh",
+      "status": "completed",
+      "poster_url": "https://phimimg.com/upload/vod/20230910-1/650eb2f2c626b48f6598f8a43f4ebabf.jpg",
+      "thumb_url": "",
+      "is_copyright": false,
+      "sub_docquyen": false,
+      "chieurap": false,
+      "trailer_url": "",
+      "time": "91 phút",
+      "episode_current": "Full",
+      "episode_total": "1",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "notify": "",
+      "showtimes": "",
+      "year": 2021,
+      "view": 21,
+      "actor": [
+        "Vanessa Hudgens",
+        "Kimiko Glenn",
+        "James Marsden",
+        "Sofia Carson",
+        "Liza Koshy",
+        "Ken Jeong",
+        "Elizabeth Perkins",
+        "Jane Krakowski",
+        "Phil LaMarr"
+      ],
+      "director": [
+        "José Luis Ucha",
+        "Robert Cullen",
+        " Director  Mark Fattibene"
+      ],
+      "category": [
+        {
+          "id": "a2492d6cbc4d58f115406ca14e5ec7b6",
+          "name": "Gia Đình",
+          "slug": "gia-dinh"
+        },
+        {
+          "id": "68564911f00849030f9c9c144ea1b931",
+          "name": "Viễn Tưởng",
+          "slug": "vien-tuong"
+        },
+        {
+          "id": "ba6fd52e5a3aca80eaaf1a3b50a182db",
+          "name": "Hài Hước",
+          "slug": "hai-huoc"
+        },
+        {
+          "id": "66c78b23908113d478d8d85390a244b4",
+          "name": "Phiêu Lưu",
+          "slug": "phieu-luu"
+        }
+      ],
+      "country": [
+        {
+          "id": "af5c50bf625c1da71838678a5cf37189",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "server_name": "#Hà Nội (Vietsub)",
+        "server_data": [
+          {
+            "name": "Full",
+            "slug": "full",
+            "filename": "Pony Bé Nhỏ: Thế Hệ Mới - My Little Pony: A New Generation - 2021 - 1080p - Vietsub - Full",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230910/r57hPFvz/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230910/r57hPFvz/index.m3u8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "status": true,
+    "msg": "",
+    "movie": {
+      "tmdb": {
+        "type": null,
+        "id": null,
+        "season": null,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      "imdb": {
+        "id": null
+      },
+      "created": {
+        "time": "2023-09-06T16:22:27.000Z"
+      },
+      "modified": {
+        "time": "2023-09-09T22:59:52.000Z"
+      },
+      "_id": "eccbc87e4b5ce2fe28308fd9f2a7baf3",
+      "name": "Barbie",
+      "slug": "barbie",
+      "origin_name": "Barbie",
+      "content": "BARBIE sẽ được nhào nặn và chắp bút bởi nữ đạo diễn kiêm biên kịch từng nhận nhiều Đề cử Tượng vàng Oscar – Greta Grewig. Hai nhân vật chính Barbie và Ken sẽ được hóa thân bởi nữ diên viên Margot Robbie và nam thần Ryan Gosling, hứa hẹn sẽ tạo nên “chemistry” đáng yêu giữa hai nhân vật búp bê nổi tiếng thế giới.",
+      "type": "single",
+      "status": "completed",
+      "poster_url": "https://phimimg.com/upload/vod/20230906-1/7433612b1129b29f33b8adb004e2aef6.jpg",
+      "thumb_url": "",
+      "is_copyright": false,
+      "sub_docquyen": false,
+      "chieurap": false,
+      "trailer_url": "",
+      "time": "114 Phút",
+      "episode_current": "Full",
+      "episode_total": "1",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "notify": "",
+      "showtimes": "",
+      "year": 2023,
+      "view": 29,
+      "actor": [
+        "Margot Robbie",
+        "Ryan Gosling",
+        "America Ferrera",
+        "Kate McKinnon",
+        "Ariana Greenblatt",
+        "Michael Cera",
+        "Will Ferrell",
+        "Issa Rae",
+        "Alexandra Shipp",
+        "Emma Mackey"
+      ],
+      "director": [
+        "Greta Gerwig"
+      ],
+      "category": [
+        {
+          "id": "ba6fd52e5a3aca80eaaf1a3b50a182db",
+          "name": "Hài Hước",
+          "slug": "hai-huoc"
+        },
+        {
+          "id": "66c78b23908113d478d8d85390a244b4",
+          "name": "Phiêu Lưu",
+          "slug": "phieu-luu"
+        }
+      ],
+      "country": [
+        {
+          "id": "74d9fa92f4dea9ecea8fc2233dc7921a",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        },
+        {
+          "id": "932bbaca386ee0436ad0159117eabae4",
+          "name": "Anh",
+          "slug": "anh"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "server_name": "#Hà Nội (Vietsub)",
+        "server_data": [
+          {
+            "name": "Full",
+            "slug": "full",
+            "filename": "Barbie - Barbie - 2023 - 1080p - Vietsub - Full",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230906/UM8kLWnC/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230906/UM8kLWnC/index.m3u8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "status": true,
+    "msg": "",
+    "movie": {
+      "tmdb": {
+        "type": null,
+        "id": null,
+        "season": null,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      "imdb": {
+        "id": null
+      },
+      "created": {
+        "time": "2023-09-08T14:58:15.000Z"
+      },
+      "modified": {
+        "time": "2023-09-08T14:58:33.000Z"
+      },
+      "_id": "c51ce410c124a10e0db5e4b97fc2af39",
+      "name": "Vươn Tới Cung Trăng",
+      "slug": "vuon-toi-cung-trang",
+      "origin_name": "Over the Moon",
+      "content": "Được những ký ức về mẹ thôi thúc, cô bé tháo vát Phi Phi đóng tàu tên lửa lên mặt trăng trong nhiệm vụ chứng minh Hằng Nga trong thần thoại là có thật.",
+      "type": "hoathinh",
+      "status": "completed",
+      "poster_url": "https://phimimg.com/upload/vod/20230908-1/f5c82b4c5bf14eaae90e48c36897c3fa.jpg",
+      "thumb_url": "",
+      "is_copyright": false,
+      "sub_docquyen": false,
+      "chieurap": false,
+      "trailer_url": "",
+      "time": "100 phút",
+      "episode_current": "Full",
+      "episode_total": "1",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "notify": "",
+      "showtimes": "",
+      "year": 2020,
+      "view": 21,
+      "actor": [
+        "Cathy Ang",
+        "Phillipa Soo",
+        "Ken Jeong"
+      ],
+      "director": [
+        "Đang cập nhật"
+      ],
+      "category": [
+        {
+          "id": "252e74b4c832ddb4233d7499f5ed122e",
+          "name": "Âm Nhạc",
+          "slug": "am-nhac"
+        },
+        {
+          "id": "a2492d6cbc4d58f115406ca14e5ec7b6",
+          "name": "Gia Đình",
+          "slug": "gia-dinh"
+        }
+      ],
+      "country": [
+        {
+          "id": "74d9fa92f4dea9ecea8fc2233dc7921a",
+          "name": "Âu Mỹ",
+          "slug": "au-my"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "server_name": "#Hà Nội (Vietsub)",
+        "server_data": [
+          {
+            "name": "Full",
+            "slug": "full",
+            "filename": "Vươn Tới Cung Trăng - Over the Moon - 2020 - 1080p - Vietsub - Full",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230908/qFbAmUNg/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230908/qFbAmUNg/index.m3u8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "status": true,
+    "msg": "",
+    "movie": {
+      "tmdb": {
+        "type": null,
+        "id": null,
+        "season": null,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      "imdb": {
+        "id": null
+      },
+      "created": {
+        "time": "2023-09-07T01:03:10.000Z"
+      },
+      "modified": {
+        "time": "2023-09-07T18:30:43.000Z"
+      },
+      "_id": "1679091c5a880faf6fb5e6087eb1b2dc",
+      "name": "Khi Anh Chạy Về Phía Em",
+      "slug": "khi-anh-chay-ve-phia-em",
+      "origin_name": "When I Fly Towards You",
+      "content": "Vào đầu mùa thu năm 2012, một trường trung học phổ thông trọng điểm của thành phố Z mở kì thi tuyển học sinh mới, Tô Tại Tại đã trúng tuyển và được bước chân vào ngôi trường. Vào ngày đầu tiên đi học, Trương Lục Nhượng đã thu hút sự chú ý của Tô Tại Tại, khiến cô đã “Yêu ngay từ cái nhìn đầu tiên”. Nhờ sự ấm áp như ánh mặt trời của mình, Tô Tại Tại đã giúp Trương Lục Nhượng thoát khỏi sự tự ti. Còn Tô Tại Tại, người luôn đi theo số đông mà không biết kế hoạch, mục tiêu của mình là gì, dưới tác động của học bá Trương Lục Nhượng, cô dần dần hiểu ra cách lập kế hoạch và mục tiêu cho cuộc đời mình. Câu chuyện cho ta thấy ý nghĩa của sự thiếu hiểu trong tuổi trẻ và dần từ từ tiến đến một tương lai tươi sáng, tốt đẹp hơn.",
+      "type": "series",
+      "status": "completed",
+      "poster_url": "https://phimimg.com/upload/vod/20230929-1/a6110983f8de490e116383020adc4662.jpg",
+      "thumb_url": "https://phimimg.com/upload/vod/20230929-1/e7e0790c8f05fe27a758d37bf5c1fd90.jpg",
+      "is_copyright": false,
+      "sub_docquyen": false,
+      "chieurap": false,
+      "trailer_url": "",
+      "time": "30 phút/tập",
+      "episode_current": "Hoàn Tất (24/24)",
+      "episode_total": "24",
+      "quality": "HD",
+      "lang": "Vietsub",
+      "notify": "",
+      "showtimes": "",
+      "year": 2023,
+      "view": 24,
+      "actor": [
+        "Zhou Yi Ran",
+        "Miaoyi Zhang",
+        "ZhiNan Jiang",
+        "Bian Tianyang"
+      ],
+      "director": [
+        "Đang cập nhật"
+      ],
+      "category": [
+        {
+          "id": "bb2b4b030608ca5984c8dd0770f5b40b",
+          "name": "Tình Cảm",
+          "slug": "tinh-cam"
+        }
+      ],
+      "country": [
+        {
+          "id": "3e075636c731fe0f889c69e0bf82c083",
+          "name": "Trung Quốc",
+          "slug": "trung-quoc"
+        }
+      ]
+    },
+    "episodes": [
+      {
+        "server_name": "#Hà Nội (Vietsub)",
+        "server_data": [
+          {
+            "name": "Tập 1",
+            "slug": "tap-1",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 1",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/S7BVCpM0/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/S7BVCpM0/index.m3u8"
+          },
+          {
+            "name": "Tập 2",
+            "slug": "tap-2",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 2",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/ZHlJFhQq/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/ZHlJFhQq/index.m3u8"
+          },
+          {
+            "name": "Tập 3",
+            "slug": "tap-3",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 3",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/LbMzd3di/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/LbMzd3di/index.m3u8"
+          },
+          {
+            "name": "Tập 4",
+            "slug": "tap-4",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 4",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/dWJcnuoN/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/dWJcnuoN/index.m3u8"
+          },
+          {
+            "name": "Tập 5",
+            "slug": "tap-5",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 5",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/DOsWcfJi/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/DOsWcfJi/index.m3u8"
+          },
+          {
+            "name": "Tập 6",
+            "slug": "tap-6",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 6",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/isVI6nsc/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/isVI6nsc/index.m3u8"
+          },
+          {
+            "name": "Tập 7",
+            "slug": "tap-7",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 7",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/p8La6h5b/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/p8La6h5b/index.m3u8"
+          },
+          {
+            "name": "Tập 8",
+            "slug": "tap-8",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 8",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/TJNKwEYB/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/TJNKwEYB/index.m3u8"
+          },
+          {
+            "name": "Tập 9",
+            "slug": "tap-9",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 9",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/0DGSLqb9/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/0DGSLqb9/index.m3u8"
+          },
+          {
+            "name": "Tập 10",
+            "slug": "tap-10",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 10",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/f62Al1U2/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/f62Al1U2/index.m3u8"
+          },
+          {
+            "name": "Tập 11",
+            "slug": "tap-11",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 11",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/IvNmZP16/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/IvNmZP16/index.m3u8"
+          },
+          {
+            "name": "Tập 12",
+            "slug": "tap-12",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 12",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/Mv8yecfH/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/Mv8yecfH/index.m3u8"
+          },
+          {
+            "name": "Tập 13",
+            "slug": "tap-13",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 13",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/VOdl4WMe/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/VOdl4WMe/index.m3u8"
+          },
+          {
+            "name": "Tập 14",
+            "slug": "tap-14",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 14",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/64x5lVUg/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/64x5lVUg/index.m3u8"
+          },
+          {
+            "name": "Tập 15",
+            "slug": "tap-15",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 15",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/N4dKfSHy/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/N4dKfSHy/index.m3u8"
+          },
+          {
+            "name": "Tập 16",
+            "slug": "tap-16",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 16",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/Dl5yVA53/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/Dl5yVA53/index.m3u8"
+          },
+          {
+            "name": "Tập 17",
+            "slug": "tap-17",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 17",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/daZYcVlQ/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/daZYcVlQ/index.m3u8"
+          },
+          {
+            "name": "Tập 18",
+            "slug": "tap-18",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 18",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/BKDLwfqg/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/BKDLwfqg/index.m3u8"
+          },
+          {
+            "name": "Tập 19",
+            "slug": "tap-19",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 19",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/ax6Qcm7B/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/ax6Qcm7B/index.m3u8"
+          },
+          {
+            "name": "Tập 20",
+            "slug": "tap-20",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 20",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/mxIVPEVZ/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/mxIVPEVZ/index.m3u8"
+          },
+          {
+            "name": "Tập 21",
+            "slug": "tap-21",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 21",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/tX46QeGD/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/tX46QeGD/index.m3u8"
+          },
+          {
+            "name": "Tập 22",
+            "slug": "tap-22",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 22",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/HeDrM5PI/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/HeDrM5PI/index.m3u8"
+          },
+          {
+            "name": "Tập 23",
+            "slug": "tap-23",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 23",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/eH8JrVPu/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/eH8JrVPu/index.m3u8"
+          },
+          {
+            "name": "Tập 24",
+            "slug": "tap-24",
+            "filename": "Khi Anh Chạy Về Phía Em - When I Fly Towards You - 2023 - 1080p - Vietsub - Tập 24",
+            "link_embed": "https://player.phimapi.com/player/?url=https://s2.phim1280.tv/20230907/N4ARumKz/index.m3u8",
+            "link_m3u8": "https://s2.phim1280.tv/20230907/N4ARumKz/index.m3u8"
+          }
+        ]
+      }
+    ]
+  }
+]
