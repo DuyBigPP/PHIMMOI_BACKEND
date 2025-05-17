@@ -1,0 +1,213 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model for authentication and user management
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  password      String
+  name          String?
+  isAdmin       Boolean     @default(false)
+  role          Role        @default(USER)
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  // Relations
+  comments      Comment[]
+  ratings       Rating[]
+  favorites     Favorite[]
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+// Movie model
+model Movie {
+  id            String    @id @default(uuid())
+  name          String
+  slug          String    @unique
+  originName    String
+  content       String    @db.Text
+  type          String    // movie, series, hoathinh
+  status        String    // completed, ongoing
+  posterUrl     String
+  thumbUrl      String
+  isCopyright   Boolean   @default(false)
+  subDocquyen   Boolean   @default(false)
+  chieurap      Boolean   @default(false)
+  trailerUrl    String?
+  time          String?
+  episodeCurrent String?
+  episodeTotal  String?
+  quality       String?
+  lang          String?
+  notify        String?   @db.Text
+  showtimes     String?   @db.Text
+  year          Int
+  view          Int       @default(0)
+  tmdbId        String?
+  tmdbType      String?
+  tmdbVoteAverage Float?
+  tmdbVoteCount Int?
+  imdbId        String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  actors        MovieActor[]
+  directors     MovieDirector[]
+  categories    MovieCategory[]
+  countries     MovieCountry[]
+  episodes      Episode[]
+  comments      Comment[]
+  ratings       Rating[]
+  favorites     Favorite[]
+}
+
+// Actor model
+model Actor {
+  id            String    @id @default(uuid())
+  name          String    @unique
+  movies        MovieActor[]
+}
+
+// Director model
+model Director {
+  id            String    @id @default(uuid())
+  name          String    @unique
+  movies        MovieDirector[]
+}
+
+// Category model
+model Category {
+  id            String    @id @default(uuid())
+  name          String
+  slug          String    @unique
+  movies        MovieCategory[]
+}
+
+// Country model
+model Country {
+  id            String    @id @default(uuid())
+  name          String
+  slug          String    @unique
+  movies        MovieCountry[]
+}
+
+// Episode model
+model Episode {
+  id            String    @id @default(uuid())
+  name          String
+  slug          String
+  filename      String
+  linkEmbed     String
+  linkM3u8      String
+  movieId       String
+  serverName    String
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  movie         Movie     @relation(fields: [movieId], references: [id])
+
+  @@unique([movieId, slug])
+}
+
+// Comment model
+model Comment {
+  id            String    @id @default(uuid())
+  content       String    @db.Text
+  userId        String
+  movieId       String
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  user          User      @relation(fields: [userId], references: [id])
+  movie         Movie     @relation(fields: [movieId], references: [id])
+
+  @@index([userId])
+  @@index([movieId])
+}
+
+// Rating model
+model Rating {
+  id            String    @id @default(uuid())
+  score         Int       // 1-5 stars
+  review        String?   @db.Text
+  userId        String
+  movieId       String
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  user          User      @relation(fields: [userId], references: [id])
+  movie         Movie     @relation(fields: [movieId], references: [id])
+
+  @@unique([userId, movieId])
+}
+
+// Favorite model
+model Favorite {
+  id            String    @id @default(uuid())
+  userId        String
+  movieId       String
+  createdAt     DateTime  @default(now())
+
+  // Relations
+  user          User      @relation(fields: [userId], references: [id])
+  movie         Movie     @relation(fields: [movieId], references: [id])
+
+  @@unique([userId, movieId])
+}
+
+// MovieActor model for many-to-many relationship
+model MovieActor {
+  movieId       String
+  actorName     String
+  movie         Movie     @relation(fields: [movieId], references: [id])
+  actor         Actor     @relation(fields: [actorName], references: [name])
+
+  @@id([movieId, actorName])
+}
+
+// MovieDirector model for many-to-many relationship
+model MovieDirector {
+  movieId       String
+  directorName  String
+  movie         Movie     @relation(fields: [movieId], references: [id])
+  director      Director  @relation(fields: [directorName], references: [name])
+
+  @@id([movieId, directorName])
+}
+
+// MovieCategory model for many-to-many relationship
+model MovieCategory {
+  movieId       String
+  categorySlug  String
+  movie         Movie     @relation(fields: [movieId], references: [id])
+  category      Category  @relation(fields: [categorySlug], references: [slug])
+
+  @@id([movieId, categorySlug])
+}
+
+// MovieCountry model for many-to-many relationship
+model MovieCountry {
+  movieId       String
+  countrySlug   String
+  movie         Movie     @relation(fields: [movieId], references: [id])
+  country       Country   @relation(fields: [countrySlug], references: [slug])
+
+  @@id([movieId, countrySlug])
+} 
