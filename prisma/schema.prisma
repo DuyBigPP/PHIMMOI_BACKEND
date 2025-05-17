@@ -136,6 +136,9 @@ model Comment {
   // Relations
   user          User      @relation(fields: [userId], references: [id])
   movie         Movie     @relation(fields: [movieId], references: [id])
+
+  @@index([userId])
+  @@index([movieId])
 }
 
 // Rating model

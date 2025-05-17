@@ -140,6 +140,58 @@ const options = {
             success: { type: 'boolean' },
             message: { type: 'string' }
           }
+        },
+        Comment: {
+          type: 'object',
+          properties: {
+            id: {
+              type: 'string',
+              description: 'ID của bình luận'
+            },
+            content: {
+              type: 'string',
+              description: 'Nội dung bình luận'
+            },
+            createdAt: {
+              type: 'string',
+              format: 'date-time',
+              description: 'Thời gian tạo bình luận'
+            },
+            updatedAt: {
+              type: 'string',
+              format: 'date-time',
+              description: 'Thời gian cập nhật bình luận'
+            },
+            user: {
+              type: 'object',
+              properties: {
+                id: {
+                  type: 'string',
+                  description: 'ID của người dùng'
+                },
+                name: {
+                  type: 'string',
+                  description: 'Tên người dùng'
+                },
+                email: {
+                  type: 'string',
+                  description: 'Email người dùng'
+                }
+              }
+            },
+            movieId: {
+              type: 'string',
+              description: 'ID của phim'
+            }
+          },
+          required: [
+            'id',
+            'content',
+            'createdAt',
+            'updatedAt',
+            'user',
+            'movieId'
+          ]
         }
       }
     }

@@ -5,6 +5,9 @@ const swaggerSpec = require('./config/swagger');
 const authRoutes = require('./routes/auth');
 const movieRoutes = require('./routes/movie.routes');
 const ratingRoutes = require('./routes/rating.routes');
+const commentRoutes = require('./routes/comment.routes');
+const recommendationRoutes = require('./routes/recommendation.routes');
+const viewRoutes = require('./routes/view.routes');
 
 const app = express();
 
@@ -16,9 +19,12 @@ app.use(express.json());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Routes
-app.use('/api/auth', authRoutes);
+app.use('/api', authRoutes);
 app.use('/api', movieRoutes);
 app.use('/api', ratingRoutes);
+app.use('/api', commentRoutes);
+app.use('/api', recommendationRoutes);
+app.use('/api', viewRoutes);
 
 // 404 handler
 app.use((req, res) => {
