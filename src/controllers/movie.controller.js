@@ -146,7 +146,52 @@ const getMovieBySlug = async (req, res) => {
   }
 };
 
+// Lấy danh sách phim phổ biến
+const getPopularMovies = async (req, res) => {
+  try {
+    const limit = parseInt(req.query.limit) || 10;
+    const type = req.query.type;
+
+    const where = {};
+    if (type) {
+      where.type = type;
+    }
+
+    const movies = await prisma.movie.findMany({
+      where,
+      take: limit,
+      orderBy: {
+        view: 'desc'
+      },
+      include: {
+        categories: {
+          include: {
+            category: true
+          }
+        },
+        countries: {
+          include: {
+            country: true
+          }
+        }
+      }
+    });
+
+    return res.json({
+      success: true,
+      data: movies
+    });
+  } catch (error) {
+    console.error('Error getting popular movies:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Internal server error'
+    });
+  }
+};
+
 module.exports = {
   getMovies,
-  getMovieBySlug
-}; 
+  getMovieBySlug,
+  getPopularMovies
+};
