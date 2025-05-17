@@ -8,6 +8,8 @@ const ratingRoutes = require('./routes/rating.routes');
 const commentRoutes = require('./routes/comment.routes');
 const recommendationRoutes = require('./routes/recommendation.routes');
 const viewRoutes = require('./routes/view.routes');
+const favoriteRoutes = require('./routes/favorite.routes');
+const adminMovieRoutes = require('./routes/admin/movie.routes');
 
 const app = express();
 
@@ -25,6 +27,8 @@ app.use('/api', ratingRoutes);
 app.use('/api', commentRoutes);
 app.use('/api', recommendationRoutes);
 app.use('/api', viewRoutes);
+app.use('/api', favoriteRoutes);
+app.use('/api/admin', adminMovieRoutes);
 
 // 404 handler
 app.use((req, res) => {
