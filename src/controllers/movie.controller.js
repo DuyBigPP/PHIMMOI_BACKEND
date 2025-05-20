@@ -190,8 +190,97 @@ const getPopularMovies = async (req, res) => {
   }
 };
 
+// Thêm phim (Admin)
+const createMovie = async (req, res) => {
+  try {
+    const { categories, countries, ...movieData } = req.body;
+    if (!Array.isArray(categories) || categories.length === 0) {
+      return res.status(400).json({ success: false, message: 'categories is required and must be a non-empty array' });
+    }
+    if (!Array.isArray(countries) || countries.length === 0) {
+      return res.status(400).json({ success: false, message: 'countries is required and must be a non-empty array' });
+    }
+    // Tạo phim
+    const movie = await prisma.movie.create({ data: movieData });
+    // Tạo liên kết category
+    await Promise.all(categories.map(categorySlug =>
+      prisma.movieCategory.create({ data: { movieId: movie.id, categorySlug } })
+    ));
+    // Tạo liên kết country
+    await Promise.all(countries.map(countrySlug =>
+      prisma.movieCountry.create({ data: { movieId: movie.id, countrySlug } })
+    ));
+    // Lấy lại phim kèm categories/countries
+    const movieWithRelations = await prisma.movie.findUnique({
+      where: { id: movie.id },
+      include: {
+        categories: { include: { category: true } },
+        countries: { include: { country: true } }
+      }
+    });
+    return res.status(201).json({
+      success: true,
+      data: movieWithRelations
+    });
+  } catch (error) {
+    console.error('Error creating movie:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Internal server error',
+      error: error.message
+    });
+  }
+};
+
+// Sửa phim (Admin)
+const updateMovie = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const data = req.body;
+    const movie = await prisma.movie.update({
+      where: { id },
+      data
+    });
+    return res.json({
+      success: true,
+      data: movie
+    });
+  } catch (error) {
+    console.error('Error updating movie:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Internal server error',
+      error: error.message
+    });
+  }
+};
+
+// Xóa phim (Admin)
+const deleteMovie = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await prisma.movie.delete({
+      where: { id }
+    });
+    return res.json({
+      success: true,
+      message: 'Movie deleted successfully'
+    });
+  } catch (error) {
+    console.error('Error deleting movie:', error);
+    return res.status(500).json({
+      success: false,
+      message: 'Internal server error',
+      error: error.message
+    });
+  }
+};
+
 module.exports = {
   getMovies,
   getMovieBySlug,
-  getPopularMovies
+  getPopularMovies,
+  createMovie,
+  updateMovie,
+  deleteMovie
 };

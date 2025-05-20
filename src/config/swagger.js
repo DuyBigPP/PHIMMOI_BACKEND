@@ -192,6 +192,53 @@ const options = {
             'user',
             'movieId'
           ]
+        },
+        MovieCreateInput: {
+          type: 'object',
+          required: ['name', 'slug', 'originName', 'content', 'type', 'status', 'posterUrl', 'thumbUrl', 'year', 'categories', 'countries'],
+          properties: {
+            name: { type: 'string' },
+            slug: { type: 'string' },
+            originName: { type: 'string' },
+            content: { type: 'string' },
+            type: { type: 'string' },
+            status: { type: 'string' },
+            posterUrl: { type: 'string' },
+            thumbUrl: { type: 'string' },
+            year: { type: 'integer' },
+            categories: {
+              type: 'array',
+              items: { type: 'string', description: 'Slug của category' },
+              description: 'Danh sách slug thể loại (bắt buộc)'
+            },
+            countries: {
+              type: 'array',
+              items: { type: 'string', description: 'Slug của quốc gia' },
+              description: 'Danh sách slug quốc gia (bắt buộc)'
+            },
+            isCopyright: { type: 'boolean' },
+            subDocquyen: { type: 'boolean' },
+            chieurap: { type: 'boolean' },
+            trailerUrl: { type: 'string' },
+            time: { type: 'string' },
+            episodeCurrent: { type: 'string' },
+            episodeTotal: { type: 'string' },
+            quality: { type: 'string' },
+            lang: { type: 'string' },
+            notify: { type: 'string' },
+            showtimes: { type: 'string' },
+            view: { type: 'integer' },
+            tmdbId: { type: 'string' },
+            tmdbType: { type: 'string' },
+            tmdbVoteAverage: { type: 'number' },
+            tmdbVoteCount: { type: 'integer' },
+            imdbId: { type: 'string', nullable: true },
+            duration: { type: 'integer' },
+            rating: { type: 'number' },
+            poster: { type: 'string' },
+            backdrop: { type: 'string' },
+            // ... các trường khác nếu muốn cho phép nhập khi tạo
+          }
         }
       }
     }

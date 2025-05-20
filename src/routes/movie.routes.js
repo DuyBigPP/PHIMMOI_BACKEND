@@ -1,5 +1,8 @@
 const express = require('express');
 const { getMovies, getMovieBySlug, getPopularMovies } = require('../controllers/movie.controller');
+const { auth, adminAuth } = require('../middleware/auth');
+const { createMovie, updateMovie, deleteMovie } = require('../controllers/movie.controller');
+const { createEpisode, updateEpisode, deleteEpisode } = require('../controllers/episode.controller');
 
 const router = express.Router();
 
@@ -153,5 +156,321 @@ router.get('/movies/popular', getPopularMovies);
  *               $ref: '#/components/schemas/Error'
  */
 router.get('/movies/:slug', getMovieBySlug);
+
+/**
+ * @swagger
+ * /api/movies:
+ *   post:
+ *     summary: Thêm phim mới (Admin)
+ *     tags: [Movies]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/MovieCreateInput'
+ *     responses:
+ *       201:
+ *         description: Thêm phim thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 data:
+ *                   $ref: '#/components/schemas/Movie'
+ *       401:
+ *         description: Chưa xác thực admin
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       500:
+ *         description: Lỗi server
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ */
+router.post('/movies', adminAuth, createMovie);
+
+/**
+ * @swagger
+ * /api/movies/{id}:
+ *   put:
+ *     summary: Sửa phim (Admin)
+ *     tags: [Movies]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID của phim
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Movie'
+ *     responses:
+ *       200:
+ *         description: Sửa phim thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 data:
+ *                   $ref: '#/components/schemas/Movie'
+ *       401:
+ *         description: Chưa xác thực admin
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       404:
+ *         description: Không tìm thấy phim
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       500:
+ *         description: Lỗi server
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ */
+router.put('/movies/:id', adminAuth, updateMovie);
+
+/**
+ * @swagger
+ * /api/movies/{id}:
+ *   delete:
+ *     summary: Xóa phim (Admin)
+ *     tags: [Movies]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID của phim
+ *     responses:
+ *       200:
+ *         description: Xóa phim thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 message:
+ *                   type: string
+ *       401:
+ *         description: Chưa xác thực admin
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       404:
+ *         description: Không tìm thấy phim
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       500:
+ *         description: Lỗi server
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ */
+router.delete('/movies/:id', adminAuth, deleteMovie);
+
+/**
+ * @swagger
+ * /api/episodes:
+ *   post:
+ *     summary: Thêm tập phim mới (Admin)
+ *     tags: [Movies]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *               slug:
+ *                 type: string
+ *               filename:
+ *                 type: string
+ *               linkEmbed:
+ *                 type: string
+ *               linkM3u8:
+ *                 type: string
+ *               movieId:
+ *                 type: string
+ *               serverName:
+ *                 type: string
+ *     responses:
+ *       201:
+ *         description: Thêm tập phim thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 data:
+ *                   type: object
+ *       401:
+ *         description: Chưa xác thực admin
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       500:
+ *         description: Lỗi server
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ */
+router.post('/episodes', adminAuth, createEpisode);
+
+/**
+ * @swagger
+ * /api/episodes/{id}:
+ *   put:
+ *     summary: Sửa tập phim (Admin)
+ *     tags: [Movies]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID của tập phim
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *               slug:
+ *                 type: string
+ *               filename:
+ *                 type: string
+ *               linkEmbed:
+ *                 type: string
+ *               linkM3u8:
+ *                 type: string
+ *               movieId:
+ *                 type: string
+ *               serverName:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Sửa tập phim thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 data:
+ *                   type: object
+ *       401:
+ *         description: Chưa xác thực admin
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       404:
+ *         description: Không tìm thấy tập phim
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       500:
+ *         description: Lỗi server
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ */
+router.put('/episodes/:id', adminAuth, updateEpisode);
+
+/**
+ * @swagger
+ * /api/episodes/{id}:
+ *   delete:
+ *     summary: Xóa tập phim (Admin)
+ *     tags: [Movies]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID của tập phim
+ *     responses:
+ *       200:
+ *         description: Xóa tập phim thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 message:
+ *                   type: string
+ *       401:
+ *         description: Chưa xác thực admin
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       404:
+ *         description: Không tìm thấy tập phim
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ *       500:
+ *         description: Lỗi server
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ */
+router.delete('/episodes/:id', adminAuth, deleteEpisode);
 
 module.exports = router; 
