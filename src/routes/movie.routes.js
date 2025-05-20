@@ -87,40 +87,6 @@ router.get('/movies', getMovies);
 
 /**
  * @swagger
- * /api/movies/{slug}:
- *   get:
- *     summary: Lấy chi tiết phim theo slug
- *     tags: [Movies]
- *     parameters:
- *       - in: path
- *         name: slug
- *         required: true
- *         schema:
- *           type: string
- *         description: Slug của phim
- *     responses:
- *       200:
- *         description: Lấy chi tiết phim thành công
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 success:
- *                   type: boolean
- *                 data:
- *                   $ref: '#/components/schemas/Movie'
- *       404:
- *         description: Không tìm thấy phim
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/Error'
- */
-router.get('/movies/:slug', getMovieBySlug);
-
-/**
- * @swagger
  * /api/movies/popular:
  *   get:
  *     summary: Lấy danh sách phim phổ biến
@@ -153,5 +119,39 @@ router.get('/movies/:slug', getMovieBySlug);
  *                     $ref: '#/components/schemas/Movie'
  */
 router.get('/movies/popular', getPopularMovies);
+
+/**
+ * @swagger
+ * /api/movies/{slug}:
+ *   get:
+ *     summary: Lấy chi tiết phim theo slug
+ *     tags: [Movies]
+ *     parameters:
+ *       - in: path
+ *         name: slug
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Slug của phim
+ *     responses:
+ *       200:
+ *         description: Lấy chi tiết phim thành công
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 data:
+ *                   $ref: '#/components/schemas/Movie'
+ *       404:
+ *         description: Không tìm thấy phim
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ */
+router.get('/movies/:slug', getMovieBySlug);
 
 module.exports = router; 
