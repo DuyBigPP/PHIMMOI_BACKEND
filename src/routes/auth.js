@@ -10,7 +10,7 @@ const prisma = new PrismaClient();
 
 /**
  * @swagger
- * /api/auth/register:
+ * /api/register:
  *   post:
  *     summary: Đăng ký người dùng mới
  *     tags: [Xác thực]
@@ -134,7 +134,7 @@ router.post('/register',
 
 /**
  * @swagger
- * /api/auth/login:
+ * /api/login:
  *   post:
  *     summary: Đăng nhập
  *     tags: [Xác thực]
@@ -237,7 +237,7 @@ router.post('/login',
 
 /**
  * @swagger
- * /api/auth/me:
+ * /api/me:
  *   get:
  *     summary: Lấy thông tin người dùng hiện tại
  *     tags: [Xác thực]
@@ -293,7 +293,7 @@ router.get('/me', auth, async (req, res) => {
 
 /**
  * @swagger
- * /api/auth/users:
+ * /api/users:
  *   get:
  *     summary: Lấy danh sách người dùng (Chỉ Admin)
  *     tags: [Xác thực]
@@ -352,7 +352,7 @@ router.get('/users', adminAuth, async (req, res) => {
 
 /**
  * @swagger
- * /api/auth/users/{id}:
+ * /api/users/{id}:
  *   put:
  *     summary: Cập nhật thông tin người dùng (Chỉ Admin)
  *     tags: [Xác thực]
@@ -437,7 +437,7 @@ router.put('/users/:id', adminAuth, async (req, res) => {
 
 /**
  * @swagger
- * /api/auth/users/{id}:
+ * /api/users/{id}:
  *   delete:
  *     summary: Xóa người dùng (Chỉ Admin)
  *     tags: [Xác thực]
