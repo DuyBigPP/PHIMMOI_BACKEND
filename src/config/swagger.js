@@ -239,6 +239,18 @@ const options = {
             backdrop: { type: 'string' },
             // ... các trường khác nếu muốn cho phép nhập khi tạo
           }
+        },
+        Favorite: {
+          type: 'object',
+          properties: {
+            id: { type: 'string' },
+            userId: { type: 'string' },
+            movieId: { type: 'string' },
+            createdAt: { type: 'string', format: 'date-time' },
+            movie: {
+              $ref: '#/components/schemas/Movie'
+            }
+          }
         }
       }
     }
