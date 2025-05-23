@@ -14,7 +14,7 @@ const options = {
     },
     servers: [
       {
-        url: 'https://phimmoi-backend.onrender.com',
+        url: 'https://phimmoibackend-production.up.railway.app/',
         description: 'Development server'
       }
     ],
