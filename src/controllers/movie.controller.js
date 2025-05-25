@@ -194,22 +194,54 @@ const getPopularMovies = async (req, res) => {
 const createMovie = async (req, res) => {
   try {
     const { categories, countries, ...movieData } = req.body;
+
+    // Validate required fields
     if (!Array.isArray(categories) || categories.length === 0) {
       return res.status(400).json({ success: false, message: 'categories is required and must be a non-empty array' });
     }
     if (!Array.isArray(countries) || countries.length === 0) {
       return res.status(400).json({ success: false, message: 'countries is required and must be a non-empty array' });
     }
+
+    // Handle uploaded files
+    if (req.files) {
+      if (req.files.poster) {
+        movieData.posterUrl = req.files.poster[0].path;
+      }
+      if (req.files.thumb) {
+        movieData.thumbUrl = req.files.thumb[0].path;
+      }
+    }
+
+    // Chuyển đổi các trường boolean
+    const booleanFields = ['isCopyright', 'subDocquyen', 'chieurap'];
+    booleanFields.forEach(field => {
+      if (movieData[field] !== undefined) {
+        movieData[field] = movieData[field] === 'true' || movieData[field] === true;
+      }
+    });
+
+    // Chuyển đổi các trường number
+    const numberFields = ['year', 'tmdbVoteCount', 'tmdbVoteAverage'];
+    numberFields.forEach(field => {
+      if (movieData[field] !== undefined) {
+        movieData[field] = Number(movieData[field]);
+      }
+    });
+
     // Tạo phim
     const movie = await prisma.movie.create({ data: movieData });
+
     // Tạo liên kết category
     await Promise.all(categories.map(categorySlug =>
       prisma.movieCategory.create({ data: { movieId: movie.id, categorySlug } })
     ));
+
     // Tạo liên kết country
     await Promise.all(countries.map(countrySlug =>
       prisma.movieCountry.create({ data: { movieId: movie.id, countrySlug } })
     ));
+
     // Lấy lại phim kèm categories/countries
     const movieWithRelations = await prisma.movie.findUnique({
       where: { id: movie.id },
@@ -218,6 +250,7 @@ const createMovie = async (req, res) => {
         countries: { include: { country: true } }
       }
     });
+
     return res.status(201).json({
       success: true,
       data: movieWithRelations
@@ -236,11 +269,46 @@ const createMovie = async (req, res) => {
 const updateMovie = async (req, res) => {
   try {
     const { id } = req.params;
-    const data = req.body;
+    const data = { ...req.body };
+
+    // Handle uploaded files
+    if (req.files) {
+      if (req.files.poster) {
+        data.posterUrl = req.files.poster[0].path;
+      }
+      if (req.files.thumb) {
+        data.thumbUrl = req.files.thumb[0].path;
+      }
+    }
+
+    // Chuyển đổi các trường boolean
+    const booleanFields = ['isCopyright', 'subDocquyen', 'chieurap'];
+    booleanFields.forEach(field => {
+      if (data[field] !== undefined) {
+        data[field] = data[field] === 'true' || data[field] === true;
+      }
+    });
+
+    // Chuyển đổi các trường number
+    const numberFields = ['year', 'tmdbVoteCount', 'tmdbVoteAverage'];
+    numberFields.forEach(field => {
+      if (data[field] !== undefined) {
+        data[field] = Number(data[field]);
+      }
+    });
+
+    // Remove undefined values
+    Object.keys(data).forEach(key => {
+      if (data[key] === undefined) {
+        delete data[key];
+      }
+    });
+
     const movie = await prisma.movie.update({
       where: { id },
       data
     });
+
     return res.json({
       success: true,
       data: movie

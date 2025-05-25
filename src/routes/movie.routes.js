@@ -3,6 +3,7 @@ const { getMovies, getMovieBySlug, getPopularMovies } = require('../controllers/
 const { auth, adminAuth } = require('../middleware/auth');
 const { createMovie, updateMovie, deleteMovie } = require('../controllers/movie.controller');
 const { createEpisode, updateEpisode, deleteEpisode } = require('../controllers/episode.controller');
+const { uploadImage, uploadVideo } = require('../config/cloudinary');
 
 const router = express.Router();
 
@@ -168,9 +169,82 @@ router.get('/movies/:slug', getMovieBySlug);
  *     requestBody:
  *       required: true
  *       content:
- *         application/json:
+ *         multipart/form-data:
  *           schema:
- *             $ref: '#/components/schemas/MovieCreateInput'
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 description: Tên phim
+ *               slug:
+ *                 type: string
+ *                 description: Slug của phim
+ *               originName:
+ *                 type: string
+ *                 description: Tên gốc của phim
+ *               content:
+ *                 type: string
+ *                 description: Nội dung phim
+ *               type:
+ *                 type: string
+ *                 description: Loại phim (movie, series, hoathinh)
+ *               status:
+ *                 type: string
+ *                 description: Trạng thái phim (completed, ongoing)
+ *               poster:
+ *                 type: string
+ *                 format: binary
+ *                 description: File poster phim
+ *               thumb:
+ *                 type: string
+ *                 format: binary
+ *                 description: File thumbnail phim
+ *               isCopyright:
+ *                 type: boolean
+ *                 description: Có bản quyền hay không
+ *               subDocquyen:
+ *                 type: boolean
+ *                 description: Có phụ đề hay không
+ *               chieurap:
+ *                 type: boolean
+ *                 description: Có chiếu rạp hay không
+ *               trailerUrl:
+ *                 type: string
+ *                 description: URL trailer phim
+ *               time:
+ *                 type: string
+ *                 description: Thời lượng phim
+ *               episodeCurrent:
+ *                 type: string
+ *                 description: Tập hiện tại (cho phim series)
+ *               episodeTotal:
+ *                 type: string
+ *                 description: Tổng số tập (cho phim series)
+ *               quality:
+ *                 type: string
+ *                 description: Chất lượng phim
+ *               lang:
+ *                 type: string
+ *                 description: Ngôn ngữ phim
+ *               notify:
+ *                 type: string
+ *                 description: Thông báo về phim
+ *               showtimes:
+ *                 type: string
+ *                 description: Lịch chiếu phim
+ *               year:
+ *                 type: integer
+ *                 description: Năm phát hành
+ *               categories:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                 description: Danh sách slug của thể loại
+ *               countries:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                 description: Danh sách slug của quốc gia
  *     responses:
  *       201:
  *         description: Thêm phim thành công
@@ -196,7 +270,10 @@ router.get('/movies/:slug', getMovieBySlug);
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-router.post('/movies', adminAuth, createMovie);
+router.post('/movies', adminAuth, uploadImage.fields([
+  { name: 'poster', maxCount: 1 },
+  { name: 'thumb', maxCount: 1 }
+]), createMovie);
 
 /**
  * @swagger
@@ -216,9 +293,87 @@ router.post('/movies', adminAuth, createMovie);
  *     requestBody:
  *       required: true
  *       content:
- *         application/json:
+ *         multipart/form-data:
  *           schema:
- *             $ref: '#/components/schemas/Movie'
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 description: Tên phim
+ *               slug:
+ *                 type: string
+ *                 description: Slug của phim
+ *               originName:
+ *                 type: string
+ *                 description: Tên gốc của phim
+ *               content:
+ *                 type: string
+ *                 description: Nội dung phim
+ *               type:
+ *                 type: string
+ *                 description: Loại phim (movie, series, hoathinh)
+ *               status:
+ *                 type: string
+ *                 description: Trạng thái phim (completed, ongoing)
+ *               poster:
+ *                 type: string
+ *                 format: binary
+ *                 description: File poster phim
+ *               thumb:
+ *                 type: string
+ *                 format: binary
+ *                 description: File thumbnail phim
+ *               isCopyright:
+ *                 type: boolean
+ *                 description: Có bản quyền hay không
+ *               subDocquyen:
+ *                 type: boolean
+ *                 description: Có phụ đề hay không
+ *               chieurap:
+ *                 type: boolean
+ *                 description: Có chiếu rạp hay không
+ *               trailerUrl:
+ *                 type: string
+ *                 description: URL trailer phim
+ *               time:
+ *                 type: string
+ *                 description: Thời lượng phim
+ *               episodeCurrent:
+ *                 type: string
+ *                 description: Tập hiện tại (cho phim series)
+ *               episodeTotal:
+ *                 type: string
+ *                 description: Tổng số tập (cho phim series)
+ *               quality:
+ *                 type: string
+ *                 description: Chất lượng phim
+ *               lang:
+ *                 type: string
+ *                 description: Ngôn ngữ phim
+ *               notify:
+ *                 type: string
+ *                 description: Thông báo về phim
+ *               showtimes:
+ *                 type: string
+ *                 description: Lịch chiếu phim
+ *               year:
+ *                 type: integer
+ *                 description: Năm phát hành
+ *               tmdbId:
+ *                 type: string
+ *                 description: ID phim trên TMDB
+ *               tmdbType:
+ *                 type: string
+ *                 description: Loại phim trên TMDB
+ *               tmdbVoteAverage:
+ *                 type: number
+ *                 description: Điểm đánh giá trung bình trên TMDB
+ *               tmdbVoteCount:
+ *                 type: integer
+ *                 description: Số lượt đánh giá trên TMDB
+ *               imdbId:
+ *                 type: string
+ *                 description: ID phim trên IMDB
  *     responses:
  *       200:
  *         description: Sửa phim thành công
@@ -250,7 +405,10 @@ router.post('/movies', adminAuth, createMovie);
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-router.put('/movies/:id', adminAuth, updateMovie);
+router.put('/movies/:id', adminAuth, uploadImage.fields([
+  { name: 'poster', maxCount: 1 },
+  { name: 'thumb', maxCount: 1 }
+]), updateMovie);
 
 /**
  * @swagger
@@ -311,24 +469,26 @@ router.delete('/movies/:id', adminAuth, deleteMovie);
  *     requestBody:
  *       required: true
  *       content:
- *         application/json:
+ *         multipart/form-data:
  *           schema:
  *             type: object
  *             properties:
  *               name:
  *                 type: string
+ *                 description: Tên tập phim
  *               slug:
  *                 type: string
- *               filename:
- *                 type: string
- *               linkEmbed:
- *                 type: string
- *               linkM3u8:
- *                 type: string
+ *                 description: Slug của tập phim
  *               movieId:
  *                 type: string
+ *                 description: ID của phim
  *               serverName:
  *                 type: string
+ *                 description: Tên server
+ *               video:
+ *                 type: string
+ *                 format: binary
+ *                 description: File video của tập phim
  *     responses:
  *       201:
  *         description: Thêm tập phim thành công
@@ -341,6 +501,40 @@ router.delete('/movies/:id', adminAuth, deleteMovie);
  *                   type: boolean
  *                 data:
  *                   type: object
+ *                   properties:
+ *                     id:
+ *                       type: string
+ *                     name:
+ *                       type: string
+ *                     slug:
+ *                       type: string
+ *                     filename:
+ *                       type: string
+ *                     linkEmbed:
+ *                       type: string
+ *                     linkM3u8:
+ *                       type: string
+ *                     movieId:
+ *                       type: string
+ *                     serverName:
+ *                       type: string
+ *                     createdAt:
+ *                       type: string
+ *                       format: date-time
+ *                     updatedAt:
+ *                       type: string
+ *                       format: date-time
+ *       400:
+ *         description: Thiếu thông tin bắt buộc
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 message:
+ *                   type: string
  *       401:
  *         description: Chưa xác thực admin
  *         content:
@@ -354,7 +548,7 @@ router.delete('/movies/:id', adminAuth, deleteMovie);
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-router.post('/episodes', adminAuth, createEpisode);
+router.post('/episodes', adminAuth, uploadVideo.single('video'), createEpisode);
 
 /**
  * @swagger
@@ -374,24 +568,26 @@ router.post('/episodes', adminAuth, createEpisode);
  *     requestBody:
  *       required: true
  *       content:
- *         application/json:
+ *         multipart/form-data:
  *           schema:
  *             type: object
  *             properties:
  *               name:
  *                 type: string
+ *                 description: Tên tập phim
  *               slug:
  *                 type: string
- *               filename:
- *                 type: string
- *               linkEmbed:
- *                 type: string
- *               linkM3u8:
- *                 type: string
+ *                 description: Slug của tập phim
  *               movieId:
  *                 type: string
+ *                 description: ID của phim
  *               serverName:
  *                 type: string
+ *                 description: Tên server
+ *               video:
+ *                 type: string
+ *                 format: binary
+ *                 description: File video của tập phim
  *     responses:
  *       200:
  *         description: Sửa tập phim thành công
@@ -404,6 +600,40 @@ router.post('/episodes', adminAuth, createEpisode);
  *                   type: boolean
  *                 data:
  *                   type: object
+ *                   properties:
+ *                     id:
+ *                       type: string
+ *                     name:
+ *                       type: string
+ *                     slug:
+ *                       type: string
+ *                     filename:
+ *                       type: string
+ *                     linkEmbed:
+ *                       type: string
+ *                     linkM3u8:
+ *                       type: string
+ *                     movieId:
+ *                       type: string
+ *                     serverName:
+ *                       type: string
+ *                     createdAt:
+ *                       type: string
+ *                       format: date-time
+ *                     updatedAt:
+ *                       type: string
+ *                       format: date-time
+ *       400:
+ *         description: Thiếu thông tin bắt buộc
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 message:
+ *                   type: string
  *       401:
  *         description: Chưa xác thực admin
  *         content:
@@ -423,7 +653,7 @@ router.post('/episodes', adminAuth, createEpisode);
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-router.put('/episodes/:id', adminAuth, updateEpisode);
+router.put('/episodes/:id', adminAuth, uploadVideo.single('video'), updateEpisode);
 
 /**
  * @swagger
