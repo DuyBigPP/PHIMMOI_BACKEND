@@ -10,6 +10,9 @@ const recommendationRoutes = require('./routes/recommendation.routes');
 const viewRoutes = require('./routes/view.routes');
 const favoriteRoutes = require('./routes/favorite.routes');
 const adminStatsRoutes = require('./routes/adminStats.routes');
+const categoryRoutes = require('./routes/category.routes');
+const countryRoutes = require('./routes/country.routes');
+const actorRoutes = require('./routes/actor.routes');
 
 const app = express();
 
@@ -29,6 +32,9 @@ app.use('/api', recommendationRoutes);
 app.use('/api', viewRoutes);
 app.use('/api', favoriteRoutes);
 app.use('/api', adminStatsRoutes);
+app.use('/api', categoryRoutes);
+app.use('/api', countryRoutes);
+app.use('/api', actorRoutes);
 
 // 404 handler
 app.use((req, res) => {

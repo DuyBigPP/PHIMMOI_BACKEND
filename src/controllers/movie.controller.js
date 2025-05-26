@@ -193,7 +193,7 @@ const getPopularMovies = async (req, res) => {
 // Thêm phim (Admin)
 const createMovie = async (req, res) => {
   try {
-    const { categories, countries, ...movieData } = req.body;
+    const { categories, countries, actors, ...movieData } = req.body;
 
     // Validate required fields
     if (!Array.isArray(categories) || categories.length === 0) {
@@ -242,12 +242,26 @@ const createMovie = async (req, res) => {
       prisma.movieCountry.create({ data: { movieId: movie.id, countrySlug } })
     ));
 
-    // Lấy lại phim kèm categories/countries
+    // Tạo liên kết actor (nếu có)
+    if (Array.isArray(actors) && actors.length > 0) {
+      for (const actorName of actors) {
+        // Tạo mới actor nếu chưa có
+        let actor = await prisma.actor.findUnique({ where: { name: actorName } });
+        if (!actor) {
+          actor = await prisma.actor.create({ data: { name: actorName } });
+        }
+        // Tạo liên kết
+        await prisma.movieActor.create({ data: { movieId: movie.id, actorName: actor.name } });
+      }
+    }
+
+    // Lấy lại phim kèm categories/countries/actors
     const movieWithRelations = await prisma.movie.findUnique({
       where: { id: movie.id },
       include: {
         categories: { include: { category: true } },
-        countries: { include: { country: true } }
+        countries: { include: { country: true } },
+        actors: { include: { actor: true } }
       }
     });
 
@@ -269,7 +283,7 @@ const createMovie = async (req, res) => {
 const updateMovie = async (req, res) => {
   try {
     const { id } = req.params;
-    const data = { ...req.body };
+    const { categories, countries, actors, ...data } = req.body;
 
     // Handle uploaded files
     if (req.files) {
@@ -304,14 +318,55 @@ const updateMovie = async (req, res) => {
       }
     });
 
+    // Cập nhật phim
     const movie = await prisma.movie.update({
       where: { id },
       data
     });
 
+    // Cập nhật lại categories nếu truyền lên
+    if (Array.isArray(categories)) {
+      // Xóa hết liên kết cũ
+      await prisma.movieCategory.deleteMany({ where: { movieId: id } });
+      // Tạo lại liên kết mới
+      await Promise.all(categories.map(categorySlug =>
+        prisma.movieCategory.create({ data: { movieId: id, categorySlug } })
+      ));
+    }
+
+    // Cập nhật lại countries nếu truyền lên
+    if (Array.isArray(countries)) {
+      await prisma.movieCountry.deleteMany({ where: { movieId: id } });
+      await Promise.all(countries.map(countrySlug =>
+        prisma.movieCountry.create({ data: { movieId: id, countrySlug } })
+      ));
+    }
+
+    // Cập nhật lại actors nếu truyền lên
+    if (Array.isArray(actors)) {
+      await prisma.movieActor.deleteMany({ where: { movieId: id } });
+      for (const actorName of actors) {
+        let actor = await prisma.actor.findUnique({ where: { name: actorName } });
+        if (!actor) {
+          actor = await prisma.actor.create({ data: { name: actorName } });
+        }
+        await prisma.movieActor.create({ data: { movieId: id, actorName: actor.name } });
+      }
+    }
+
+    // Lấy lại phim kèm categories/countries/actors
+    const movieWithRelations = await prisma.movie.findUnique({
+      where: { id },
+      include: {
+        categories: { include: { category: true } },
+        countries: { include: { country: true } },
+        actors: { include: { actor: true } }
+      }
+    });
+
     return res.json({
       success: true,
-      data: movie
+      data: movieWithRelations
     });
   } catch (error) {
     console.error('Error updating movie:', error);
@@ -344,11 +399,55 @@ const deleteMovie = async (req, res) => {
   }
 };
 
+// Thêm thể loại cho phim (Admin)
+const addCategoryToMovie = async (req, res) => {
+  try {
+    const { movieId } = req.params;
+    const { categorySlug } = req.body;
+    // Kiểm tra tồn tại
+    const movie = await prisma.movie.findUnique({ where: { id: movieId } });
+    if (!movie) return res.status(404).json({ success: false, message: 'Movie not found' });
+    const category = await prisma.category.findUnique({ where: { slug: categorySlug } });
+    if (!category) return res.status(404).json({ success: false, message: 'Category not found' });
+    // Kiểm tra đã có liên kết chưa
+    const exist = await prisma.movieCategory.findUnique({ where: { movieId_categorySlug: { movieId, categorySlug } } });
+    if (exist) return res.status(400).json({ success: false, message: 'Movie already has this category' });
+    // Tạo liên kết
+    await prisma.movieCategory.create({ data: { movieId, categorySlug } });
+    return res.json({ success: true, message: 'Category added to movie' });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: 'Internal server error', error: error.message });
+  }
+};
+
+// Thêm quốc gia cho phim (Admin)
+const addCountryToMovie = async (req, res) => {
+  try {
+    const { movieId } = req.params;
+    const { countrySlug } = req.body;
+    // Kiểm tra tồn tại
+    const movie = await prisma.movie.findUnique({ where: { id: movieId } });
+    if (!movie) return res.status(404).json({ success: false, message: 'Movie not found' });
+    const country = await prisma.country.findUnique({ where: { slug: countrySlug } });
+    if (!country) return res.status(404).json({ success: false, message: 'Country not found' });
+    // Kiểm tra đã có liên kết chưa
+    const exist = await prisma.movieCountry.findUnique({ where: { movieId_countrySlug: { movieId, countrySlug } } });
+    if (exist) return res.status(400).json({ success: false, message: 'Movie already has this country' });
+    // Tạo liên kết
+    await prisma.movieCountry.create({ data: { movieId, countrySlug } });
+    return res.json({ success: true, message: 'Country added to movie' });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: 'Internal server error', error: error.message });
+  }
+};
+
 module.exports = {
   getMovies,
   getMovieBySlug,
   getPopularMovies,
   createMovie,
   updateMovie,
-  deleteMovie
+  deleteMovie,
+  addCategoryToMovie,
+  addCountryToMovie
 };

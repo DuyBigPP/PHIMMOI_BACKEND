@@ -14,8 +14,8 @@ const options = {
     },
     servers: [
       {
-        //url: 'https://phimmoibackend-production.up.railway.app/',
-        url: 'http://localhost:3000/',
+        url: 'https://phimmoibackend-production.up.railway.app/',
+        //url: 'http://localhost:3000/',
         description: 'Development server'
       }
     ],

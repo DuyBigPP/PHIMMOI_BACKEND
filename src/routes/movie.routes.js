@@ -1,5 +1,5 @@
 const express = require('express');
-const { getMovies, getMovieBySlug, getPopularMovies } = require('../controllers/movie.controller');
+const { getMovies, getMovieBySlug, getPopularMovies, addCategoryToMovie, addCountryToMovie } = require('../controllers/movie.controller');
 const { auth, adminAuth } = require('../middleware/auth');
 const { createMovie, updateMovie, deleteMovie } = require('../controllers/movie.controller');
 const { createEpisode, updateEpisode, deleteEpisode } = require('../controllers/episode.controller');
@@ -245,6 +245,11 @@ router.get('/movies/:slug', getMovieBySlug);
  *                 items:
  *                   type: string
  *                 description: Danh sách slug của quốc gia
+ *               actors:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                 description: Danh sách tên diễn viên
  *     responses:
  *       201:
  *         description: Thêm phim thành công
@@ -374,6 +379,21 @@ router.post('/movies', adminAuth, uploadImage.fields([
  *               imdbId:
  *                 type: string
  *                 description: ID phim trên IMDB
+ *               categories:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                 description: Danh sách slug của thể loại
+ *               countries:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                 description: Danh sách slug của quốc gia
+ *               actors:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                 description: Danh sách tên diễn viên
  *     responses:
  *       200:
  *         description: Sửa phim thành công
