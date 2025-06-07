@@ -4,6 +4,8 @@ const { auth, adminAuth } = require('../middleware/auth');
 const { createMovie, updateMovie, deleteMovie } = require('../controllers/movie.controller');
 const { createEpisode, updateEpisode, deleteEpisode } = require('../controllers/episode.controller');
 const { uploadImage, uploadVideo } = require('../config/cloudinary');
+const multer = require('multer');
+const upload = multer();
 
 const router = express.Router();
 
@@ -171,85 +173,30 @@ router.get('/movies/:slug', getMovieBySlug);
  *       content:
  *         multipart/form-data:
  *           schema:
- *             type: object
- *             properties:
- *               name:
- *                 type: string
- *                 description: Tên phim
- *               slug:
- *                 type: string
- *                 description: Slug của phim
- *               originName:
- *                 type: string
- *                 description: Tên gốc của phim
- *               content:
- *                 type: string
- *                 description: Nội dung phim
- *               type:
- *                 type: string
- *                 description: Loại phim (movie, series, hoathinh)
- *               status:
- *                 type: string
- *                 description: Trạng thái phim (completed, ongoing)
- *               poster:
- *                 type: string
- *                 format: binary
- *                 description: File poster phim
- *               thumb:
- *                 type: string
- *                 format: binary
- *                 description: File thumbnail phim
- *               isCopyright:
- *                 type: boolean
- *                 description: Có bản quyền hay không
- *               subDocquyen:
- *                 type: boolean
- *                 description: Có phụ đề hay không
- *               chieurap:
- *                 type: boolean
- *                 description: Có chiếu rạp hay không
- *               trailerUrl:
- *                 type: string
- *                 description: URL trailer phim
- *               time:
- *                 type: string
- *                 description: Thời lượng phim
- *               episodeCurrent:
- *                 type: string
- *                 description: Tập hiện tại (cho phim series)
- *               episodeTotal:
- *                 type: string
- *                 description: Tổng số tập (cho phim series)
- *               quality:
- *                 type: string
- *                 description: Chất lượng phim
- *               lang:
- *                 type: string
- *                 description: Ngôn ngữ phim
- *               notify:
- *                 type: string
- *                 description: Thông báo về phim
- *               showtimes:
- *                 type: string
- *                 description: Lịch chiếu phim
- *               year:
- *                 type: integer
- *                 description: Năm phát hành
- *               categories:
- *                 type: array
- *                 items:
- *                   type: string
- *                 description: Danh sách slug của thể loại
- *               countries:
- *                 type: array
- *                 items:
- *                   type: string
- *                 description: Danh sách slug của quốc gia
- *               actors:
- *                 type: array
- *                 items:
- *                   type: string
- *                 description: Danh sách tên diễn viên
+ *             $ref: '#/components/schemas/MovieCreateInput'
+ *           examples:
+ *             example1:
+ *               summary: Thêm phim mới
+ *               value:
+ *                 name: "Tên phim"
+ *                 slug: "ten-phim"
+ *                 originName: "Original Name"
+ *                 content: "Nội dung phim"
+ *                 type: "movie"
+ *                 status: "completed"
+ *                 poster: (binary)
+ *                 thumb: (binary)
+ *                 year: 2024
+ *                 categories[]: ["hanh-dong", "tinh-cam"]
+ *                 countries[]: ["viet-nam", "han-quoc"]
+ *                 actors[]: ["Nguyễn Văn A", "Trần Thị B"]
+ *                 isCopyright: true
+ *                 subDocquyen: true
+ *                 chieurap: false
+ *                 trailerUrl: "https://youtube.com/watch?v=..."
+ *                 time: "120 phút"
+ *                 quality: "1080p"
+ *                 lang: "vi"
  *     responses:
  *       201:
  *         description: Thêm phim thành công
@@ -260,10 +207,18 @@ router.get('/movies/:slug', getMovieBySlug);
  *               properties:
  *                 success:
  *                   type: boolean
+ *                 message:
+ *                   type: string
  *                 data:
  *                   $ref: '#/components/schemas/Movie'
+ *       400:
+ *         description: Dữ liệu không hợp lệ
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
  *       401:
- *         description: Chưa xác thực admin
+ *         description: Chưa đăng nhập hoặc không có quyền
  *         content:
  *           application/json:
  *             schema:
@@ -275,7 +230,7 @@ router.get('/movies/:slug', getMovieBySlug);
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-router.post('/movies', adminAuth, uploadImage.fields([
+router.post('/movies', adminAuth, upload.fields([
   { name: 'poster', maxCount: 1 },
   { name: 'thumb', maxCount: 1 }
 ]), createMovie);

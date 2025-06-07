@@ -14,8 +14,7 @@ const options = {
     },
     servers: [
       {
-        url: 'https://phimmoibackend-production.up.railway.app/',
-        //url: 'http://localhost:3000/',
+        url: 'http://localhost:3000/',
         description: 'Development server'
       }
     ],
@@ -196,7 +195,7 @@ const options = {
         },
         MovieCreateInput: {
           type: 'object',
-          required: ['name', 'slug', 'originName', 'content', 'type', 'status', 'posterUrl', 'thumbUrl', 'year', 'categories', 'countries'],
+          required: ['name', 'slug', 'originName', 'content', 'type', 'status', 'poster', 'thumb', 'year', 'categories', 'countries'],
           properties: {
             name: { type: 'string' },
             slug: { type: 'string' },
@@ -204,18 +203,26 @@ const options = {
             content: { type: 'string' },
             type: { type: 'string' },
             status: { type: 'string' },
-            posterUrl: { type: 'string' },
-            thumbUrl: { type: 'string' },
+            poster: { 
+              type: 'string',
+              format: 'binary'
+            },
+            thumb: { 
+              type: 'string',
+              format: 'binary'
+            },
             year: { type: 'integer' },
             categories: {
               type: 'array',
-              items: { type: 'string', description: 'Slug của category' },
-              description: 'Danh sách slug thể loại (bắt buộc)'
+              items: { type: 'string' },
+              description: 'Danh sách slug thể loại (ví dụ: ["hanh-dong", "tinh-cam"])',
+              example: ['hanh-dong', 'tinh-cam']
             },
             countries: {
               type: 'array',
-              items: { type: 'string', description: 'Slug của quốc gia' },
-              description: 'Danh sách slug quốc gia (bắt buộc)'
+              items: { type: 'string' },
+              description: 'Danh sách slug quốc gia (ví dụ: ["viet-nam", "han-quoc"])',
+              example: ['viet-nam', 'han-quoc']
             },
             isCopyright: { type: 'boolean' },
             subDocquyen: { type: 'boolean' },
@@ -236,9 +243,12 @@ const options = {
             imdbId: { type: 'string', nullable: true },
             duration: { type: 'integer' },
             rating: { type: 'number' },
-            poster: { type: 'string' },
-            backdrop: { type: 'string' },
-            // ... các trường khác nếu muốn cho phép nhập khi tạo
+            actors: {
+              type: 'array',
+              items: { type: 'string' },
+              description: 'Danh sách tên diễn viên (ví dụ: ["Nguyễn Văn A", "Trần Thị B"])',
+              example: ['Nguyễn Văn A', 'Trần Thị B']
+            }
           }
         },
         Favorite: {
@@ -259,4 +269,6 @@ const options = {
   apis: ['./src/routes/*.js'] // Path to the API routes
 };
 
-module.exports = swaggerJsdoc(options); 
+const swaggerSpec = swaggerJsdoc(options);
+
+module.exports = swaggerSpec; 
