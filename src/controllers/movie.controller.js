@@ -226,176 +226,188 @@ const createMovie = async (req, res) => {
       });
     }
 
-    // Handle uploaded files
-    console.log('Processing uploaded files...');
-    const posterFile = req.files.poster[0];
-    const thumbFile = req.files.thumb[0];
-    
-    console.log('Poster file:', posterFile);
-    console.log('Thumb file:', thumbFile);
+    // Xử lý upload file
+    if (req.files) {
+      console.log('Processing uploaded files...');
+      const uploadPromises = [];
 
-    // Create temporary files
-    const posterTempPath = path.join(os.tmpdir(), posterFile.originalname);
-    const thumbTempPath = path.join(os.tmpdir(), thumbFile.originalname);
-
-    // Write buffers to temporary files
-    fs.writeFileSync(posterTempPath, posterFile.buffer);
-    fs.writeFileSync(thumbTempPath, thumbFile.buffer);
-
-    try {
-      // Upload files to Cloudinary
-      const [posterResult, thumbResult] = await Promise.all([
-        cloudinary.uploader.upload(posterTempPath, {
-          folder: 'phimmoi/images',
-          resource_type: 'image'
-        }),
-        cloudinary.uploader.upload(thumbTempPath, {
-          folder: 'phimmoi/images',
-          resource_type: 'image'
-        })
-      ]);
-
-      // Add image URLs to movie data
-      movieData.posterUrl = posterResult.secure_url;
-      movieData.thumbUrl = thumbResult.secure_url;
-
-      // Clean up temporary files
-      fs.unlinkSync(posterTempPath);
-      fs.unlinkSync(thumbTempPath);
-
-      // Chuyển đổi các trường boolean
-      const booleanFields = ['isCopyright', 'subDocquyen', 'chieurap'];
-      booleanFields.forEach(field => {
-        if (movieData[field] !== undefined) {
-          movieData[field] = movieData[field] === 'true' || movieData[field] === true;
+      if (req.files.poster && req.files.poster[0]) {
+        const posterFile = req.files.poster[0];
+        console.log('Poster file:', posterFile);
+        
+        try {
+          const tempFilePath = path.join(os.tmpdir(), posterFile.originalname);
+          await fs.promises.writeFile(tempFilePath, posterFile.buffer);
+          
+          const result = await cloudinary.uploader.upload(tempFilePath, {
+            folder: 'movies/posters',
+            resource_type: 'auto'
+          });
+          
+          movieData.posterUrl = result.secure_url;
+          
+          // Xóa file tạm an toàn
+          try {
+            await fs.promises.unlink(tempFilePath);
+          } catch (unlinkError) {
+            console.warn('Warning: Could not delete temporary file:', unlinkError);
+          }
+        } catch (error) {
+          console.error('Error uploading poster:', error);
+          throw new Error('Failed to upload poster image');
         }
-      });
+      }
 
-      // Chuyển đổi các trường number
-      const numberFields = ['year', 'tmdbVoteCount', 'tmdbVoteAverage', 'duration', 'rating', 'view'];
-      numberFields.forEach(field => {
-        if (movieData[field] !== undefined) {
-          movieData[field] = Number(movieData[field]);
+      if (req.files.thumb && req.files.thumb[0]) {
+        const thumbFile = req.files.thumb[0];
+        console.log('Thumb file:', thumbFile);
+        
+        try {
+          const tempFilePath = path.join(os.tmpdir(), thumbFile.originalname);
+          await fs.promises.writeFile(tempFilePath, thumbFile.buffer);
+          
+          const result = await cloudinary.uploader.upload(tempFilePath, {
+            folder: 'movies/thumbs',
+            resource_type: 'auto'
+          });
+          
+          movieData.thumbUrl = result.secure_url;
+          
+          // Xóa file tạm an toàn
+          try {
+            await fs.promises.unlink(tempFilePath);
+          } catch (unlinkError) {
+            console.warn('Warning: Could not delete temporary file:', unlinkError);
+          }
+        } catch (error) {
+          console.error('Error uploading thumb:', error);
+          throw new Error('Failed to upload thumb image');
         }
+      }
+    }
+
+    // Chuyển đổi các trường boolean
+    const booleanFields = ['isCopyright', 'subDocquyen', 'chieurap'];
+    booleanFields.forEach(field => {
+      if (movieData[field] !== undefined) {
+        movieData[field] = movieData[field] === 'true' || movieData[field] === true;
+      }
+    });
+
+    // Chuyển đổi các trường number
+    const numberFields = ['year', 'tmdbVoteCount', 'tmdbVoteAverage', 'duration', 'rating', 'view'];
+    numberFields.forEach(field => {
+      if (movieData[field] !== undefined) {
+        movieData[field] = Number(movieData[field]);
+      }
+    });
+
+    console.log('Processed movie data:', movieData);
+    console.log('Categories:', categories);
+    console.log('Countries:', countries);
+    console.log('Actors:', actors);
+
+    // Kiểm tra xem slug đã tồn tại chưa
+    const existingMovie = await prisma.movie.findUnique({
+      where: { slug: movieData.slug }
+    });
+
+    if (existingMovie) {
+      return res.status(400).json({
+        success: false,
+        message: `Movie with slug "${movieData.slug}" already exists`
       });
+    }
 
-      console.log('Processed movie data:', movieData);
-      console.log('Categories:', categories);
-      console.log('Countries:', countries);
-      console.log('Actors:', actors);
+    // Tạo phim
+    const movie = await prisma.movie.create({
+      data: {
+        name: movieData.name,
+        slug: movieData.slug,
+        originName: movieData.originName,
+        content: movieData.content,
+        type: movieData.type,
+        status: movieData.status,
+        posterUrl: movieData.posterUrl,
+        thumbUrl: movieData.thumbUrl,
+        isCopyright: movieData.isCopyright,
+        subDocquyen: movieData.subDocquyen,
+        chieurap: movieData.chieurap,
+        trailerUrl: movieData.trailerUrl,
+        time: movieData.time,
+        episodeCurrent: movieData.episodeCurrent,
+        episodeTotal: movieData.episodeTotal,
+        quality: movieData.quality,
+        lang: movieData.lang,
+        notify: movieData.notify,
+        showtimes: movieData.showtimes,
+        year: movieData.year,
+        view: movieData.view || 0,
+        tmdbId: movieData.tmdbId,
+        tmdbType: movieData.tmdbType,
+        tmdbVoteAverage: movieData.tmdbVoteAverage,
+        tmdbVoteCount: movieData.tmdbVoteCount,
+        imdbId: movieData.imdbId
+      }
+    });
+    console.log('Created movie:', movie);
 
-      // Kiểm tra xem slug đã tồn tại chưa
-      const existingMovie = await prisma.movie.findUnique({
-        where: { slug: movieData.slug }
-      });
+    // Tạo liên kết category
+    await Promise.all(categories.map(categorySlug =>
+      prisma.movieCategory.create({ data: { movieId: movie.id, categorySlug } })
+    ));
 
-      if (existingMovie) {
-        return res.status(400).json({
-          success: false,
-          message: `Movie with slug "${movieData.slug}" already exists`
+    // Tạo liên kết country
+    await Promise.all(countries.map(countrySlug =>
+      prisma.movieCountry.create({ data: { movieId: movie.id, countrySlug } })
+    ));
+
+    // Tạo liên kết actor
+    if (actors.length > 0) {
+      await Promise.all(actors.map(async (actorName) => {
+        // Tìm hoặc tạo actor
+        const actor = await prisma.actor.upsert({
+          where: { name: actorName },
+          update: {},
+          create: { name: actorName }
         });
-      }
+        // Tạo liên kết
+        return prisma.movieActor.create({
+          data: {
+            movieId: movie.id,
+            actorName: actor.name
+          }
+        });
+      }));
+    }
 
-      // Tạo phim
-      const movie = await prisma.movie.create({
-        data: {
-          name: movieData.name,
-          slug: movieData.slug,
-          originName: movieData.originName,
-          content: movieData.content,
-          type: movieData.type,
-          status: movieData.status,
-          posterUrl: movieData.posterUrl,
-          thumbUrl: movieData.thumbUrl,
-          isCopyright: movieData.isCopyright,
-          subDocquyen: movieData.subDocquyen,
-          chieurap: movieData.chieurap,
-          trailerUrl: movieData.trailerUrl,
-          time: movieData.time,
-          episodeCurrent: movieData.episodeCurrent,
-          episodeTotal: movieData.episodeTotal,
-          quality: movieData.quality,
-          lang: movieData.lang,
-          notify: movieData.notify,
-          showtimes: movieData.showtimes,
-          year: movieData.year,
-          view: movieData.view || 0,
-          tmdbId: movieData.tmdbId,
-          tmdbType: movieData.tmdbType,
-          tmdbVoteAverage: movieData.tmdbVoteAverage,
-          tmdbVoteCount: movieData.tmdbVoteCount,
-          imdbId: movieData.imdbId
-        }
-      });
-      console.log('Created movie:', movie);
-
-      // Tạo liên kết category
-      await Promise.all(categories.map(categorySlug =>
-        prisma.movieCategory.create({ data: { movieId: movie.id, categorySlug } })
-      ));
-
-      // Tạo liên kết country
-      await Promise.all(countries.map(countrySlug =>
-        prisma.movieCountry.create({ data: { movieId: movie.id, countrySlug } })
-      ));
-
-      // Tạo liên kết actor
-      if (actors.length > 0) {
-        await Promise.all(actors.map(async (actorName) => {
-          // Tìm hoặc tạo actor
-          const actor = await prisma.actor.upsert({
-            where: { name: actorName },
-            update: {},
-            create: { name: actorName }
-          });
-          // Tạo liên kết
-          return prisma.movieActor.create({
-            data: {
-              movieId: movie.id,
-              actorName: actor.name
-            }
-          });
-        }));
-      }
-
-      // Lấy phim vừa tạo với các thông tin liên quan
-      const createdMovie = await prisma.movie.findUnique({
-        where: { id: movie.id },
-        include: {
-          categories: {
-            include: {
-              category: true
-            }
-          },
-          countries: {
-            include: {
-              country: true
-            }
-          },
-          actors: {
-            include: {
-              actor: true
-            }
+    // Lấy phim vừa tạo với các thông tin liên quan
+    const createdMovie = await prisma.movie.findUnique({
+      where: { id: movie.id },
+      include: {
+        categories: {
+          include: {
+            category: true
+          }
+        },
+        countries: {
+          include: {
+            country: true
+          }
+        },
+        actors: {
+          include: {
+            actor: true
           }
         }
-      });
-
-      return res.status(201).json({
-        success: true,
-        message: 'Movie created successfully',
-        data: createdMovie
-      });
-    } catch (uploadError) {
-      console.error('Error uploading files:', uploadError);
-      // Clean up temporary files if they exist
-      try {
-        if (fs.existsSync(posterTempPath)) fs.unlinkSync(posterTempPath);
-        if (fs.existsSync(thumbTempPath)) fs.unlinkSync(thumbTempPath);
-      } catch (cleanupError) {
-        console.error('Error cleaning up temporary files:', cleanupError);
       }
-      throw uploadError;
-    }
+    });
+
+    return res.status(201).json({
+      success: true,
+      message: 'Movie created successfully',
+      data: createdMovie
+    });
   } catch (error) {
     console.error('Error creating movie:', error);
     return res.status(500).json({
