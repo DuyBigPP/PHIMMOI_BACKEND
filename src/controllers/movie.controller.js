@@ -137,6 +137,16 @@ const getMovieBySlug = async (req, res) => {
       });
     }
 
+    // Sắp xếp các tập phim theo số thứ tự
+    if (movie.episodes) {
+      movie.episodes.sort((a, b) => {
+        // Trích xuất số từ tên tập phim
+        const numA = parseInt(a.name.match(/\d+/)?.[0] || '0');
+        const numB = parseInt(b.name.match(/\d+/)?.[0] || '0');
+        return numA - numB;
+      });
+    }
+
     return res.json({
       success: true,
       data: movie
@@ -520,9 +530,76 @@ const updateMovie = async (req, res) => {
 const deleteMovie = async (req, res) => {
   try {
     const { id } = req.params;
-    await prisma.movie.delete({
-      where: { id }
+
+    // Lấy thông tin phim trước khi xóa để có URL của poster và thumb
+    const movie = await prisma.movie.findUnique({
+      where: { id },
+      include: {
+        episodes: true
+      }
     });
+
+    if (!movie) {
+      return res.status(404).json({
+        success: false,
+        message: 'Movie not found'
+      });
+    }
+
+    // Xóa các bản ghi liên quan
+    await prisma.$transaction([
+      // Xóa ratings
+      prisma.rating.deleteMany({
+        where: { movieId: id }
+      }),
+      // Xóa favorites
+      prisma.favorite.deleteMany({
+        where: { movieId: id }
+      }),
+      // Xóa comments
+      prisma.comment.deleteMany({
+        where: { movieId: id }
+      }),
+      // Xóa movie-category relationships
+      prisma.movieCategory.deleteMany({
+        where: { movieId: id }
+      }),
+      // Xóa movie-country relationships
+      prisma.movieCountry.deleteMany({
+        where: { movieId: id }
+      }),
+      // Xóa movie-actor relationships
+      prisma.movieActor.deleteMany({
+        where: { movieId: id }
+      }),
+      // Xóa episodes
+      prisma.episode.deleteMany({
+        where: { movieId: id }
+      }),
+      // Xóa phim
+      prisma.movie.delete({
+        where: { id }
+      })
+    ]);
+
+    // Xóa files trên Cloudinary
+    if (movie.posterUrl) {
+      const posterPublicId = movie.posterUrl.split('/').pop().split('.')[0];
+      await cloudinary.uploader.destroy(posterPublicId);
+    }
+    if (movie.thumbUrl) {
+      const thumbPublicId = movie.thumbUrl.split('/').pop().split('.')[0];
+      await cloudinary.uploader.destroy(thumbPublicId);
+    }
+
+    // Xóa video của các tập phim
+    for (const episode of movie.episodes) {
+      if (episode.videoUrl) {
+        const videoPublicId = episode.videoUrl.split('/').pop().split('.')[0];
+        await cloudinary.uploader.destroy(videoPublicId, { resource_type: 'video' });
+      }
+    }
+
     return res.json({
       success: true,
       message: 'Movie deleted successfully'

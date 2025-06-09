@@ -173,9 +173,30 @@ const updateEpisode = async (req, res) => {
 const deleteEpisode = async (req, res) => {
   try {
     const { id } = req.params;
+
+    // Lấy thông tin tập phim trước khi xóa để có URL video
+    const episode = await prisma.episode.findUnique({
+      where: { id }
+    });
+
+    if (!episode) {
+      return res.status(404).json({
+        success: false,
+        message: 'Episode not found'
+      });
+    }
+
+    // Xóa tập phim từ database
     await prisma.episode.delete({
       where: { id }
     });
+
+    // Xóa video trên Cloudinary
+    if (episode.linkEmbed) {
+      const videoPublicId = episode.linkEmbed.split('/').pop().split('.')[0];
+      await cloudinary.uploader.destroy(videoPublicId, { resource_type: 'video' });
+    }
+
     return res.json({
       success: true,
       message: 'Episode deleted successfully'
