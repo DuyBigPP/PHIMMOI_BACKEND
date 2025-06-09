@@ -126,11 +126,7 @@ const getMovieBySlug = async (req, res) => {
             director: true
           }
         },
-        episodes: {
-          orderBy: {
-            name: 'asc'
-          }
-        }
+        episodes: true
       }
     });
 
@@ -138,6 +134,21 @@ const getMovieBySlug = async (req, res) => {
       return res.status(404).json({
         success: false,
         message: 'Movie not found'
+      });
+    }
+
+    // Sắp xếp các tập phim theo số thứ tự
+    if (movie.episodes) {
+      movie.episodes.sort((a, b) => {
+        // Tách số từ tên tập phim
+        const getEpisodeNumber = (name) => {
+          const match = name.match(/\d+/);
+          return match ? parseInt(match[0]) : 0;
+        };
+
+        const numA = getEpisodeNumber(a.name);
+        const numB = getEpisodeNumber(b.name);
+        return numA - numB;
       });
     }
 
