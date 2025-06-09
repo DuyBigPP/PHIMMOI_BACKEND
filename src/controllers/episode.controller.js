@@ -1,6 +1,8 @@
 const { PrismaClient } = require('@prisma/client');
 const cloudinary = require('cloudinary').v2;
 const prisma = new PrismaClient();
+const path = require('path');
+const fs = require('fs');
 
 // Thêm tập phim mới (Admin)
 const createEpisode = async (req, res) => {
@@ -186,16 +188,34 @@ const deleteEpisode = async (req, res) => {
       });
     }
 
+    // Xóa video trên Cloudinary nếu có
+    if (episode.linkEmbed) {
+      try {
+        const videoPublicId = episode.linkEmbed.split('/').pop().split('.')[0];
+        await cloudinary.uploader.destroy(videoPublicId, { resource_type: 'video' });
+      } catch (cloudinaryError) {
+        console.error('Error deleting video from Cloudinary:', cloudinaryError);
+        // Tiếp tục xóa episode từ database ngay cả khi xóa video thất bại
+      }
+    }
+
+    // Xóa file video từ thư mục local nếu có
+    if (episode.filename) {
+      try {
+        const filePath = path.join(__dirname, '../../uploads', episode.filename);
+        if (fs.existsSync(filePath)) {
+          fs.unlinkSync(filePath);
+        }
+      } catch (fileError) {
+        console.error('Error deleting local video file:', fileError);
+        // Tiếp tục xóa episode từ database ngay cả khi xóa file thất bại
+      }
+    }
+
     // Xóa tập phim từ database
     await prisma.episode.delete({
       where: { id }
     });
-
-    // Xóa video trên Cloudinary
-    if (episode.linkEmbed) {
-      const videoPublicId = episode.linkEmbed.split('/').pop().split('.')[0];
-      await cloudinary.uploader.destroy(videoPublicId, { resource_type: 'video' });
-    }
 
     return res.json({
       success: true,

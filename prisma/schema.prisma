@@ -115,7 +115,6 @@ model Episode {
   linkM3u8      String
   movieId       String
   serverName    String
-  episodeNumber Int       // Thêm trường số thứ tự tập
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
